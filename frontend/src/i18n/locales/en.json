@@ -1,0 +1,248 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About Us",
+    "stoneTypes": "Stone Types",
+    "projects": "Projects",
+    "quote": "Request Quote"
+  },
+  "home": {
+    "heroTitle": "Natural Stone Solutions",
+    "heroSubtitle": "Over 35 years of experience manufacturing premium natural stone for façades, flooring, wall cladding, and custom architectural projects across Lebanon.",
+    "stats": {
+      "experience": "Experience",
+      "natural": "Natural Stone",
+      "projects": "Completed Projects",
+      "custom": "Precision Crafted"
+    },
+    "statsLabels": {
+      "experience": "35+",
+      "natural": "100%",
+      "projects": "500+",
+      "custom": "Custom Built"
+    },
+    "projectsTitle": "Our Projects",
+    "viewAllProjects": "View all projects",
+    "collectionTitle": "Our Stone Collection",
+    "viewAll": "View All",
+    "whyTitle": "Why Choose ",
+    "whyTitleHighlight": "Cedar Stone",
+    "why": {
+      "quality": {
+        "title": "Quality First",
+        "body": "Every stone is carefully selected and manufactured to meet the highest quality standards."
+      },
+      "service": {
+        "title": "End-to-End Service",
+        "body": "From selection to installation, we deliver seamless stone solutions with precision and care."
+      },
+      "tailored": {
+        "title": "Tailored Solutions",
+        "body": "Custom-made products designed to match each project's exact requirements."
+      },
+      "delivery": {
+        "title": "Reliable Delivery",
+        "body": "Efficient production planning ensures projects are completed on time."
+      }
+    },
+    "aboutTitle": "ABOUT ",
+    "aboutTitleHighlight": "CEDAR STONE",
+    "aboutSubtitle": "Built on Experience. Distinguished by Precision.",
+    "aboutBody": "Cedar Stone is more than just a stone manufacturing facility; it is a professional journey spanning over thirty-five years in every aspect of the natural stone industry. Our story began in 1990 under the name \"PIRAMID Stone Carving and Construction Company,\" and since then, we have been dedicated to delivering stone products that combine superior quality with exceptional craftsmanship.\n\nWe believe that every piece of natural stone possesses a unique character. For this reason, we are committed to enhancing its natural beauty through expert stone cutting, polishing, shaping, and finishing processes supported by decades of experience and modern technologies.\n\nOver the years, we have built strong and lasting relationships with homeowners, contractors, real estate developers, interior designers, and owners of commercial and hospitality projects. Today, the Cedar Stone name stands as a symbol of quality, reliability, commitment, and timely project execution.",
+    "readStory": "Read Our Story",
+    "ctaBanner": "From premium stone selection to precision craftsmanship, we bring your vision to life.",
+    "exploreServices": "Explore Our Services"
+  },
+  "about": {
+    "heroTitle": "About Cedar Stone",
+    "heroSubtitle": "For years, Cedar Stone has transformed natural stone into timeless architectural elements, combining premium materials, expert craftsmanship, and precision in every project.",
+    "impactLabel": "Our Impact",
+    "impactTitle": "Long-Term Partnerships",
+    "impactBody": "We believe in building lasting relationships based on trust, reliability, transparency, and mutual success.",
+    "legacyTitle": "A Legacy Built on Stone",
+    "legacyBody": "At Cedar Stone, we transform natural stone from a raw material into architectural elements that embody beauty, durability, and long-term value. We provide comprehensive services including stone selection, cutting and shaping, surface finishing, and the production of façade stone, flooring, and custom decorative stonework for residential, commercial, and hospitality projects across Lebanon and the Arab region.",
+    "missionVisionTitle": "Mission & Vision",
+    "missionTitle": "Mission",
+    "missionBody": "To provide integrated stone solutions that meet the careful selection of a wide range of projects through the careful selection of premium natural stone and its manufacturing according to the highest quality standards.",
+    "visionTitle": "Vision",
+    "visionBody": "To become one of the leading providers of natural stone solutions in Lebanon and the Arab region by delivering products that combine natural beauty, engineering precision, and sustainable quality.",
+    "valuesTitle": "Our Values",
+    "values": {
+      "precision": {
+        "title": "Precision & Reliability",
+        "body": "We believe exceptional spaces begin with exceptional materials."
+      },
+      "integrity": {
+        "title": "Integrity",
+        "body": "Transparency and trust guide every client relationship."
+      },
+      "innovation": {
+        "title": "Innovation",
+        "body": "Modern techniques combined with timeless craftsmanship."
+      },
+      "satisfaction": {
+        "title": "Customer Satisfaction",
+        "body": "Every project is completed with care, precision, and dedication."
+      }
+    },
+    "industriesTitle": "Industries We Serve",
+    "industries": [
+      "Homeowners",
+      "Contractors",
+      "Real Estate Developers",
+      "Interior Designers",
+      "Hospitality Projects",
+      "Commercial Projects"
+    ],
+    "industryDescriptions": {
+      "homeowners": "We help homeowners select the ideal stone for façades, flooring, and interior and exterior decorative applications, delivering solutions that combine beauty, durability, and long-term value.",
+      "contractors": "We work as a reliable stone supplier and manufacturer for contractors, providing precisely cut and finished materials that meet project specifications, timelines, and technical requirements.",
+      "realEstate": "We provide comprehensive natural stone solutions for residential and commercial developments of all sizes, with the capacity to supply large quantities while maintaining consistent quality standards.",
+      "interiorDesigners": "We work as a trusted partner for interior designers, transforming creative concepts and design visions into custom stone elements that add character, elegance, and uniqueness to every project.",
+      "hospitality": "We manufacture and execute natural stone works for hotels, resorts, and hospitality developments, combining luxury, durability, and long-term performance.",
+      "commercial": "We serve shopping centers, office buildings, restaurants, and various commercial facilities by providing natural stone façades and architectural solutions that strengthen the project's visual identity and architectural appeal."
+    },
+    "processTitle": "Manufacturing Process & Services",
+    "process": [
+      {
+        "step": "01",
+        "titlePart1": "Sourcing",
+        "titlePart2": "Raw Stone Blocks and Slabs",
+        "highlightFirst": true,
+        "body": "We carefully select premium natural stone from a variety of trusted sources to ensure exceptional quality, consistency, and aesthetic appeal in every project."
+      },
+      {
+        "step": "02",
+        "titlePart1": "Custom",
+        "titlePart2": "Cutting & Shaping",
+        "highlightFirst": false,
+        "body": "We provide precision stone cutting and fabrication services tailored to the exact requirements of each project, whether for façades, flooring, staircases, or custom architectural elements."
+      },
+      {
+        "step": "03",
+        "titlePart1": "Surface",
+        "titlePart2": "Finishing & Treatments",
+        "highlightFirst": false,
+        "body": "Every project has its own character. We offer a variety of surface finishes\u2014including polished, smooth, antique, bush-hammered, rough, and hand-carved\u2014to complement different architectural styles and design requirements."
+      },
+      {
+        "step": "04",
+        "titlePart1": "Architectural Stone",
+        "titlePart2": "Solutions",
+        "highlightFirst": false,
+        "body": "Our expertise extends to natural stone façades, indoor and outdoor flooring, wall cladding, and architectural applications that combine timeless aesthetics with long-lasting performance."
+      },
+      {
+        "step": "05",
+        "titlePart1": "Custom",
+        "titlePart2": "Stone Products & Carved Elements",
+        "highlightFirst": true,
+        "body": "Beyond standard products, we create bespoke architectural elements\u2014including columns, balustrades, fireplace surrounds, thresholds, sills, and decorative stone features\u2014crafted to meet the unique vision of every project."
+      }
+    ],
+    "applicationsTitle": "Project Gallery",
+    "applicationsBody": "We are proud to have completed a diverse range of natural stone projects across Lebanon, including:",
+    "applications": {
+      "villaFacades": "Villa and Private Residence Façades",
+      "residentialDevelopments": "Residential Developments",
+      "commercialBuildings": "Commercial Buildings",
+      "hospitalityHotel": "Hospitality and Hotel Projects",
+      "outdoorFlooring": "Outdoor Flooring and Courtyards",
+      "antiqueHeritage": "Antique and Heritage Stonework",
+      "interiorDecor": "Interior Stone Décor and Finishes"
+    }
+  },
+  "stoneTypes": {
+    "heroTitle": "Our Natural Stone Collection",
+    "heroSubtitle": "Explore our selection of premium Lebanese natural stones, crafted for residential, commercial, and hospitality projects.",
+    "collectionTitle": "Stone Collection",
+    "finishesTitle": "Surface Finishes",
+    "finishesSubtitle": "Every stone has its own character. Our range of finishes enhances its natural beauty while meeting aesthetic and functional requirements.",
+    "stones": {
+      "kfair": {
+        "name": "Kfair Stone",
+        "body": "Strong and durable natural stone with warm yellow and brown tones, ideal for exterior facades and heritage-inspired architecture."
+      },
+      "taria": {
+        "name": "Taria Stone \u2013 Baalbek",
+        "body": "A durable stone known for its beautiful antique finish, making it a popular choice for exterior cladding and staircases."
+      },
+      "arsal": {
+        "name": "Arsal Stone",
+        "body": "One of Lebanon's most renowned stones, valued for its strength, durability, and versatility in both indoor and outdoor applications."
+      },
+      "shira": {
+        "name": "Shira Stone",
+        "body": "Available in light and dark tones, Shira Stone is perfect for flooring, staircases, and heritage-style architectural designs."
+      },
+      "testa": {
+        "name": "Testa Stone (Byblos Stone)",
+        "body": "A bright white natural stone that brings elegance and sophistication to both interior and exterior spaces."
+      },
+      "rous": {
+        "name": "Rous Stone",
+        "body": "Featuring rich, darker tones, Rous Stone is ideal for antique and heritage-inspired architectural projects."
+      },
+      "labbaya": {
+        "name": "Labbaya Stone",
+        "body": "Recognized for its warm beige and pink shades, Labbaya Stone is suitable for a wide range of indoor and outdoor applications."
+      },
+      "saghbine": {
+        "name": "Saghbine Stone",
+        "body": "A versatile natural stone available in light and dark yellow tones, suitable for a variety of architectural projects."
+      },
+      "basalt": {
+        "name": "Basalt Stone",
+        "body": "Highly durable and weather-resistant. Basalt Stone is an excellent choice for flooring, landscaping, and outdoor spaces."
+      }
+    },
+    "finishes": [
+      "Polished Finish",
+      "Smooth Finish",
+      "Antique Finish",
+      "Bush-Hammered Finish",
+      "Rough Finish",
+      "Hand-Carved Finish"
+    ]
+  },
+  "projects": {
+    "heroTitle": "Our Projects",
+    "heroSubtitle": "Explore a selection of our completed projects. With over 3,000 successfully completed projects, our portfolio reflects our expertise in natural stone craftsmanship, precision in execution, and commitment to the highest quality standards.",
+    "featuredTitle": "Featured Projects"
+  },
+  "quote": {
+    "heroTitle": "Do You Have a Project in Mind?",
+    "heroSubtitle": "The Cedar Stone team is ready to help you select the most suitable natural stone and provide a customized quotation tailored to your project requirements.",
+    "fullName": "Full Name",
+    "fullNamePlaceholder": "Name",
+    "email": "Email",
+    "emailPlaceholder": "name@example.com",
+    "contact": "Contact No.",
+    "city": "City",
+    "cityPlaceholder": "Town / City",
+    "stoneType": "Required Stone Type",
+    "quantity": "Estimated Quantity",
+    "quantityPlaceholder": "e.g. 50 sqm",
+    "details": "Project Details",
+    "detailsPlaceholder": "Tell us about your project\u2026",
+    "send": "Send Quote",
+    "successTitle": "Thank you!",
+    "successBody": "Your quote request has been received. Our team will review your details and contact you shortly.",
+    "sendAnother": "Send another request"
+  },
+  "footer": {
+    "tagline": "Precision Crafted Natural Stone Solutions.",
+    "since": "Since 1990",
+    "navigation": "Navigation",
+    "getInTouch": "Get In Touch",
+    "socialMedia": "Social Media",
+    "location": "Our Location",
+    "locationValue": "Zemraya, Hasbaya, South Lebanon",
+    "rights": "\u00a9 2026 Cedar Stone. All Rights Reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms & Conditions"
+  },
+  "common": {
+    "requestQuote": "Request Quote"
+  }
+}
