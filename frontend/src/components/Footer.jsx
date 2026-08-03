@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { Mail, Phone, MapPin } from "lucide-react";
 import Logo from "../assets/Logo.svg";
@@ -6,7 +7,7 @@ import Logo from "../assets/Logo.svg";
 // Custom TikTok Icon
 const TikTokIcon = ({ className = "w-4 h-4" }) => (
   <svg className={className} viewBox="0 0 24 24" fill="currentColor">
-    <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 1 1-5.2-1.74 2.89 2.89 0 0 1 2.31-2.23V8.2a6.34 6.34 0 0 0-1 .09A6.34 6.34 0 1 0 15 15.67V9.41a8.17 8.17 0 0 0 4.59 1.41V7.37a4.85 4.85 0 0 1-.001-.68z" />
+    <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 1 1-5.2-1.74 2.89 2.89 0 0 1 2.31-2.23V8.2a6.34 6.34 0 0 0-1 .09A6.34 6.34 0 1 1 15 15.67V9.41a8.17 8.17 0 0 0 4.59 1.41V7.37a4.85 4.85 0 0 1-.001-.68z" />
   </svg>
 );
 
@@ -41,7 +42,14 @@ const WhatsAppIcon = ({ className = "w-5 h-5" }) => (
   </svg>
 );
 
-const NAV_LINKS = ["home", "about", "stoneTypes", "projects"];
+// Navigation Routes Configuration
+const NAV_ITEMS = [
+  { key: "home", translationKey: "nav.home", path: "/" },
+  { key: "about", translationKey: "nav.about", path: "/about" },
+  { key: "stoneTypes", translationKey: "nav.stoneTypes", path: "/stone-types" },
+  { key: "projects", translationKey: "nav.projects", path: "/projects" },
+  { key: "quote", translationKey: "nav.quote", path: "/request-quote" },
+];
 
 export default function Footer() {
   const { t, i18n } = useTranslation();
@@ -80,6 +88,7 @@ export default function Footer() {
 
       {/* Top Main Section */}
       <div className="bg-[#FAF9F6] mt-12 pb-16 px-6 md:px-12 lg:px-20">
+        {/* Mobile View */}
         <div className="md:hidden max-w-sm mx-auto flex flex-col items-center gap-10">
           <div className="flex flex-col items-center text-center">
             <img
@@ -87,34 +96,32 @@ export default function Footer() {
               alt="Cedar Stone Logo"
               className="w-40 object-contain"
             />
-            <p className="text-xs text-[#5A5A5A] leading-tight max-w-[220px] -mt-3">
+            <p className="font-['Century_Gothic',_Futura,_sans-serif] rtl:font-['Tajawal',_sans-serif] text-xs text-[#5A5A5A] leading-tight max-w-[220px] -mt-3">
               {t("footer.tagline")}
             </p>
-            <p className="text-xs text-[#5A5A5A] mt-2 font-medium">
+            <p className="font-['Century_Gothic',_Futura,_sans-serif] rtl:font-['Tajawal',_sans-serif] text-xs text-[#5A5A5A] mt-2 font-medium">
               {t("footer.since")}
             </p>
           </div>
 
           <div className="w-full grid grid-cols-[auto_1fr] gap-x-6 gap-y-8 items-start">
-            <h3 className="text-base text-[#2A2A2A] font-semibold">
+            <h3 className="font-['Century_Gothic',_Futura,_sans-serif] rtl:font-['Tajawal',_sans-serif] text-base text-[#2A2A2A] font-semibold">
               {t("footer.navigation")}
             </h3>
             <ul className="space-y-1.5 text-xs text-[#666666]">
-              {NAV_LINKS.map((key) => (
-                <li key={key}>
-                  <a href="#" className="hover:text-black transition-colors">
-                    {t(`nav.${key}`)}
-                  </a>
+              {NAV_ITEMS.map((item) => (
+                <li key={item.key}>
+                  <Link
+                    to={item.path}
+                    className="font-['Century_Gothic',_Futura,_sans-serif] rtl:font-['Tajawal',_sans-serif] hover:text-black transition-colors"
+                  >
+                    {t(item.translationKey)}
+                  </Link>
                 </li>
               ))}
-              <li>
-                <a href="#" className="hover:text-black transition-colors">
-                  {t("nav.quote")}
-                </a>
-              </li>
             </ul>
 
-            <h3 className="text-base text-[#2A2A2A] font-semibold">
+            <h3 className="font-['Century_Gothic',_Futura,_sans-serif] rtl:font-['Tajawal',_sans-serif] text-base text-[#2A2A2A] font-semibold">
               {t("footer.getInTouch")}
             </h3>
             <div className="space-y-2 text-xs text-[#666666]">
@@ -137,26 +144,32 @@ export default function Footer() {
               {WhatsAppButton}
             </div>
 
-            <h3 className="text-base text-[#2A2A2A] font-semibold">
+            <h3 className="font-['Century_Gothic',_Futura,_sans-serif] rtl:font-['Tajawal',_sans-serif] text-base text-[#2A2A2A] font-semibold">
               {t("footer.socialMedia")}
             </h3>
             <div className="space-y-2.5 text-xs text-[#666666]">
               <a
-                href="#"
+                href="https://www.tiktok.com/@cedar_stone_lb?_r=1&_t=ZS-98UxFxzszCv"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex items-center gap-2.5 hover:text-black transition-colors"
               >
                 <TikTokIcon className="w-4 h-4 text-[#333333]" />
                 <span>cedar_stone_lb</span>
               </a>
               <a
-                href="#"
+                href="https://www.linkedin.com/company/cedar-stone-lb"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex items-center gap-2.5 hover:text-black transition-colors"
               >
                 <LinkedInIcon className="w-4 h-4 text-[#333333]" />
                 <span>Cedar Stone</span>
               </a>
               <a
-                href="#"
+                href="https://www.instagram.com/cedar_stone_lb/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex items-center gap-2.5 hover:text-black transition-colors"
               >
                 <InstagramIcon className="w-4 h-4 text-[#333333]" />
@@ -164,7 +177,7 @@ export default function Footer() {
               </a>
             </div>
 
-            <h3 className="text-base text-[#2A2A2A] font-semibold">
+            <h3 className="font-['Century_Gothic',_Futura,_sans-serif] rtl:font-['Tajawal',_sans-serif] text-base text-[#2A2A2A] font-semibold">
               {t("footer.location")}
             </h3>
             <div className="flex items-start gap-2 text-xs text-[#666666]">
@@ -177,6 +190,7 @@ export default function Footer() {
           </div>
         </div>
 
+        {/* Desktop View */}
         <div className="hidden md:grid max-w-12xl mx-auto grid-cols-2 lg:grid-cols-5 gap-8 items-start">
           {/* Column 1: Logo & Brand Info */}
           <div className="flex flex-col items-center text-center">
@@ -187,83 +201,88 @@ export default function Footer() {
                 className="w-40 object-contain"
               />
             </div>
-            <p className="text-xs text-[#5A5A5A] leading-tight max-w-[200px] -mt-3">
+            <p className="font-['Century_Gothic',_Futura,_sans-serif] rtl:font-['Tajawal',_sans-serif] text-xs text-[#5A5A5A] leading-tight max-w-[200px] -mt-3">
               {t("footer.tagline")}
             </p>
-            <p className="text-xs text-[#5A5A5A] mt-2 font-medium">
+            <p className="font-['Century_Gothic',_Futura,_sans-serif] rtl:font-['Tajawal',_sans-serif] text-xs text-[#5A5A5A] mt-2 font-medium">
               {t("footer.since")}
             </p>
           </div>
 
           {/* Column 2: Navigation */}
           <div className="flex flex-col space-y-3">
-            <h3 className="text-base text-[#2A2A2A] font-semibold mb-1">
+            <h3 className="font-['Century_Gothic',_Futura,_sans-serif] rtl:font-['Tajawal',_sans-serif] text-base text-[#2A2A2A] font-semibold mb-1">
               {t("footer.navigation")}
             </h3>
             <ul className="space-y-1.5 text-xs text-[#666666]">
-              {NAV_LINKS.map((key) => (
-                <li key={key}>
-                  <a href="#" className="hover:text-black transition-colors">
-                    {t(`nav.${key}`)}
-                  </a>
+              {NAV_ITEMS.map((item) => (
+                <li key={item.key}>
+                  <Link
+                    to={item.path}
+                    className="font-['Century_Gothic',_Futura,_sans-serif] rtl:font-['Tajawal',_sans-serif] hover:text-black transition-colors"
+                  >
+                    {t(item.translationKey)}
+                  </Link>
                 </li>
               ))}
-              <li>
-                <a href="#" className="hover:text-black transition-colors">
-                  {t("nav.quote")}
-                </a>
-              </li>
             </ul>
           </div>
 
           {/* Column 3: Get In Touch */}
-          <div className="flex flex-col space-y-3">
-            <h3 className="text-base text-[#2A2A2A] font-semibold mb-1">
+          <div className="flex flex-col space-y-3 rtl:items-start rtl:text-right">
+            <h3 className="font-['Century_Gothic',_Futura,_sans-serif] rtl:font-['Tajawal',_sans-serif] text-base text-[#2A2A2A] font-semibold mb-1">
               {t("footer.getInTouch")}
             </h3>
+
             <div className="space-y-2 text-xs text-[#666666]">
               <a
                 href="mailto:info@cedarstonelb.com"
-                dir="ltr"
                 className="flex items-center gap-2.5 hover:text-black transition-colors"
               >
-                <Mail className="w-4 h-4 text-[#5A5A5A]" />
-                <span>info@cedarstonelb.com</span>
+                <Mail className="w-4 h-4 text-[#5A5A5A] shrink-0" />
+                <span dir="ltr">info@cedarstonelb.com</span>
               </a>
+
               <a
                 href="tel:+96170703900"
-                dir="ltr"
                 className="flex items-center gap-2.5 hover:text-black transition-colors"
               >
-                <Phone className="w-4 h-4 text-[#5A5A5A]" />
-                <span>+961 70 703 900</span>
+                <Phone className="w-4 h-4 text-[#5A5A5A] shrink-0" />
+                <span dir="ltr">+961 70 703 900</span>
               </a>
             </div>
+
             <div className="pt-2 flex justify-start">{WhatsAppButton}</div>
           </div>
 
           {/* Column 4: Social Media */}
           <div className="flex flex-col space-y-3">
-            <h3 className="text-base text-[#2A2A2A] font-semibold mb-1">
+            <h3 className="font-['Century_Gothic',_Futura,_sans-serif] rtl:font-['Tajawal',_sans-serif] text-base text-[#2A2A2A] font-semibold mb-1">
               {t("footer.socialMedia")}
             </h3>
             <div className="space-y-2.5 text-xs text-[#666666]">
               <a
-                href="#"
+                href="https://www.tiktok.com/@cedar_stone_lb?_r=1&_t=ZS-98UxFxzszCv"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex items-center gap-2.5 hover:text-black transition-colors"
               >
                 <TikTokIcon className="w-4 h-4 text-[#333333]" />
                 <span>cedar_stone_lb</span>
               </a>
               <a
-                href="#"
+                href="https://www.linkedin.com/company/cedar-stone-lb"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex items-center gap-2.5 hover:text-black transition-colors"
               >
                 <LinkedInIcon className="w-4 h-4 text-[#333333]" />
                 <span>Cedar Stone</span>
               </a>
               <a
-                href="#"
+                href="https://www.instagram.com/cedar_stone_lb/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex items-center gap-2.5 hover:text-black transition-colors"
               >
                 <InstagramIcon className="w-4 h-4 text-[#333333]" />
@@ -274,35 +293,48 @@ export default function Footer() {
 
           {/* Column 5: Our Location */}
           <div className="flex flex-col space-y-3">
-            <h3 className="text-base text-[#2A2A2A] font-semibold mb-1">
+            <h3 className="font-['Century_Gothic',_Futura,_sans-serif] rtl:font-['Tajawal',_sans-serif] text-base text-[#2A2A2A] font-semibold mb-1">
               {t("footer.location")}
             </h3>
-            <div className="flex items-start gap-2 text-xs text-[#666666]">
-              <MapPin className="w-4 h-4 text-[#5A5A5A] shrink-0 mt-0.5" />
+            <a
+              href="https://maps.google.com?q=Cedar%20Stone%20LB%20%D9%85%D9%86%D8%B4%D8%A7%D8%B1%20%D8%B5%D8%AE%D8%B1,%20Bathaniyeh,%20Lebanon"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-start gap-2 text-xs text-[#666666] hover:text-black transition-colors group"
+            >
+              <MapPin className="w-4 h-4 text-[#5A5A5A] group-hover:text-black shrink-0 mt-0.5" />
               <div>
                 <p>{locationLine1}</p>
                 <p>{locationLine2}</p>
               </div>
-            </div>
+            </a>
           </div>
         </div>
       </div>
 
-      {/* Bottom Copyright Bar — kept in a fixed left/right layout in both languages */}
+      {/* Bottom Copyright Bar */}
       <div
         dir="ltr"
         className="bg-[#2B2B2B] text-white/80 py-4 px-6 md:px-12 lg:px-20 text-xs"
       >
         <div className="max-w-7xl mx-auto flex flex-col-reverse sm:flex-row justify-between items-center gap-2">
-          <p>{t("footer.rights")}</p>
+          <p className="font-['Century_Gothic',_Futura,_sans-serif] rtl:font-['Tajawal',_sans-serif]">
+            {t("footer.rights")}
+          </p>
           <div className="flex items-center gap-2 text-white/80">
-            <a href="#" className="hover:text-white transition-colors">
+            <Link
+              to="/privacy-policy"
+              className="font-['Century_Gothic',_Futura,_sans-serif] rtl:font-['Tajawal',_sans-serif] hover:text-white transition-colors"
+            >
               {t("footer.privacy")}
-            </a>
+            </Link>
             <span>|</span>
-            <a href="#" className="hover:text-white transition-colors">
+            <Link
+              to="/terms-of-service"
+              className="font-['Century_Gothic',_Futura,_sans-serif] rtl:font-['Tajawal',_sans-serif] hover:text-white transition-colors"
+            >
               {t("footer.terms")}
-            </a>
+            </Link>
           </div>
         </div>
       </div>

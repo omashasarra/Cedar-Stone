@@ -20,7 +20,8 @@ const valueIcons = {
   satisfaction: Heart,
 };
 
-import Hero from "../assets/AboutUs-Hero&Legacy/AboutUsHero.jpg";
+import Hero from "../assets/AboutUs-Hero&Legacy/hero.png";
+import DesktopHero from "../assets/AboutUs-Hero&Legacy/AboutUsHero.jpg";
 
 import LegacyStoneImg from "../assets/AboutUs-Hero&Legacy/AboutUsStone.jpg";
 import MissionImg from "../assets/Mission&Vission/aboutus_mission.jpg";
@@ -59,7 +60,7 @@ import HospitalityHotelIcon from "../assets/AboutUs-Application/hospitality-hote
 import OutdoorFlooringIcon from "../assets/AboutUs-Application/outdoor-flooring.svg";
 import AntiqueHeritageIcon from "../assets/AboutUs-Application/antique-heritage.svg";
 import InteriorDecorIcon from "../assets/AboutUs-Application/interior-decor.svg";
-import StoneTextureBg from "../assets/gemini.jpeg";
+import StoneTextureBg from "../assets/gemini.jpg";
 
 const applicationsData = [
   { key: "villaFacades", icon: VillaFacadesIcon },
@@ -182,7 +183,7 @@ function IndustryCard({ item, index, t }) {
       {isTouchDevice ? (
         /* Mobile 3D Card Container */
         <div
-          className="relative w-full h-full"
+          className="relative w-full min-h-[220px] h-auto"
           style={{
             transformStyle: "preserve-3d",
             transform: isRevealed ? "rotateY(180deg)" : "rotateY(0deg)",
@@ -202,7 +203,7 @@ function IndustryCard({ item, index, t }) {
               <img
                 src={item.icon}
                 alt={item.label}
-                className="w-16 h-14 object-contain"
+                className="w-16 h-10 object-contain"
               />
             </div>
 
@@ -289,17 +290,25 @@ export default function About() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="relative h-[480px] sm:h-[70vh] sm:min-h-[600px] overflow-hidden">
+      <section className="relative h-[480px] sm:h-[560px] md:h-[620px] overflow-hidden">
         <img
           src={Hero}
           alt="About Cedar Stone background"
-          className="absolute inset-0 w-full h-full object-cover"
+          className="block md:hidden absolute inset-0 w-full h-full object-cover object-top"
         />
 
-        <div className="absolute inset-0 bg-gradient-to-t from-stone-900/70 via-stone-900/20 to-transparent sm:bg-black/20" />
+        <img
+          src={DesktopHero}
+          alt="About Cedar Stone background desktop"
+          className="hidden md:block absolute inset-0 w-full h-full object-cover md:object-[center_20%] md:scale-100"
+        />
 
-        <div className="relative h-full max-w-7xl mx-auto px-5 sm:px-12 flex items-end pb-12 sm:pb-16 z-10">
-          <div className="max-w-xl">
+        {/* Overlay Gradients */}
+        <div className="absolute inset-0 bg-gradient-to-t from-stone-900/70 via-stone-900/20 to-transparent" />
+
+        {/* Text Content */}
+        <div className="relative h-full max-w-7xl mx-auto px-5 sm:px-8 flex items-end pb-12 sm:pb-16">
+          <div className="max-w-xl ltr:max-w-2xl md:ltr:max-w-3xl">
             <h1 className="font-['Garamond',_'EB_Garamond',_serif] rtl:font-['Alexandria',_sans-serif] text-3xl sm:text-5xl md:text-6xl text-white leading-[1.1] md:leading-[1.05]">
               {t("about.heroTitle")}
             </h1>
@@ -312,10 +321,11 @@ export default function About() {
 
       {/* Impact & Legacy Section */}
       <div className="bg-[#E5E3DF] py-8 sm:py-10 px-4 sm:px-8">
-        <section className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+        <section className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
+          {/* Impact Swatch */}
           <Swatch
             gradient="from-[#B4A48A] to-[#7D6E57]"
-            className="lg:col-span-4 min-h-[220px] lg:h-[260px] sm:h-[300px] w-full lg:w-auto rounded-none p-6 flex flex-col justify-between shadow-2xl mx-auto lg:mx-0 text-left rtl:text-right"
+            className="lg:col-span-4 h-[280px] sm:h-[300px] w-full rounded-none p-6 flex flex-col justify-between shadow-2xl mx-auto lg:mx-0 text-left rtl:text-right"
           >
             <span className="rtl:font-['Alexandria',sans-serif] text-xs font-light tracking-wide text-white/90 font-['Century_Gothic',sans-serif]">
               {t("about.impactLabel")}
@@ -330,17 +340,20 @@ export default function About() {
             </div>
           </Swatch>
 
+          {/* Legacy Block */}
           <div className="lg:col-span-8 bg-white h-auto sm:h-[300px] rounded-2xl flex flex-col sm:flex-row items-stretch justify-between shadow-2xl overflow-hidden">
-            <div className="w-full sm:w-1/2 flex flex-col justify-center p-6 sm:p-8 text-left rtl:text-right">
-              <h3 className="font-['Garamond',serif] rtl:font-['Alexandria',sans-serif] text-2xl sm:text-3xl text-stone-900 mb-3 leading-tight">
+            {/* Text column - Compact font & line spacing */}
+            <div className="w-full sm:w-5/12 flex flex-col justify-center p-5 sm:p-6 text-left rtl:text-right shrink-0">
+              <h3 className="font-['Garamond',serif] rtl:font-['Alexandria',sans-serif] text-lg sm:text-2xl text-stone-900 mb-2 leading-tight">
                 {t("about.legacyTitle")}
               </h3>
-              <p className="text-xs sm:text-sm text-stone-700 leading-relaxed font-['Century_Gothic',sans-serif] font-light">
+              <p className="text-[11px] sm:text-xs text-stone-700 leading-normal sm:leading-relaxed font-['Century_Gothic',sans-serif] font-light">
                 {t("about.legacyBody")}
               </p>
             </div>
 
-            <div className="w-full sm:w-1/2 h-48 sm:h-full shrink-0">
+            {/* Image column */}
+            <div className="w-full sm:w-7/12 h-48 sm:h-full shrink-0">
               <img
                 src={LegacyStoneImg}
                 alt="Legacy stone"

@@ -75,16 +75,15 @@ export default function StoneTypes() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="relative w-full aspect-[16/9] sm:aspect-[21/9] min-h-[320px] overflow-hidden">
+      <section className="relative h-[480px] sm:h-[560px] md:h-[620px] overflow-hidden">
         <img
           src={heroImage}
           alt="Natural stone quarry"
           className="absolute inset-0 w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/5 via-black/7 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/7 via-transparent to-transparent" />
-        <div className="relative h-full max-w-7xl mx-auto px-5 sm:px-8 flex items-end pb-8 sm:pb-12">
-          <div className="max-w-xl">
+        <div className="absolute inset-0 bg-gradient-to-t from-stone-900/70 via-stone-900/20 to-transparent" />
+        <div className="relative h-full max-w-7xl mx-auto px-5 sm:px-8 flex items-end pb-12 sm:pb-16">
+          <div className="max-w-xl ltr:max-w-2xl md:ltr:max-w-3xl">
             <h1 className="font-['Garamond',_'EB_Garamond',_serif] rtl:font-['Alexandria',_sans-serif] text-3xl sm:text-5xl md:text-6xl text-white leading-[1.1] md:leading-[1.05]">
               {t("stoneTypes.heroTitle")}
             </h1>
