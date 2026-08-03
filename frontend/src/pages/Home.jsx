@@ -19,8 +19,8 @@ import heroImage from "../assets/Landing-Hero.jpg";
 import { TextGenerateEffect } from "../components/TextGenerateEffect";
 
 // Project images (used as fallback for projects without images)
-import project1Img from "../assets/villas/Villa2.png";
-import project2Img from "../assets/villas/villa2.jpg";
+import project1Img from "../assets/villas/villa2.png";
+import project2Img from "../assets/villas/Villa2.jpg";
 import project3Img from "../assets/villas/Villa3.jpg";
 
 // Why Choose Cedar Stone images
