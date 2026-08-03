@@ -161,11 +161,15 @@ export default function Home() {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-stone-900/70 via-stone-900/20 to-transparent" />
         <div className="relative h-full max-w-7xl mx-auto px-5 sm:px-8 flex items-end pb-12 sm:pb-16">
-          <div className="max-w-xl">
-            <h1 className="font-['Garamond',_'EB_Garamond',_serif] rtl:font-['Alexandria',_sans-serif] text-3xl sm:text-5xl md:text-6xl text-white leading-[1.1] md:leading-[1.05]">
+          <div className="max-w-xl ltr:max-w-2xl md:ltr:max-w-3xl">
+            <h1 className="font-['Garamond',_'EB_Garamond',_serif] rtl:font-['Alexandria',_sans-serif] font-light antialiased text-3xl sm:text-3xl md:text-6xl text-white leading-[1.1] md:leading-[1.05]">
+              {" "}
               {t("home.heroTitle")}
             </h1>
-            <p className="font-['Century_Gothic',_Futura,_sans-serif] text-stone-100/90 mt-4 sm:mt-5 text-xs sm:text-sm md:text-base leading-relaxed">
+            <p
+              className="font-['Century_Gothic',_Futura,_sans-serif] rtl:font-['Tajawal',_sans-serif]
+            text-stone-100/90 mt-4 sm:mt-5 text-xs sm:text-sm md:text-base leading-relaxed"
+            >
               {t("home.heroSubtitle")}
             </p>
           </div>
@@ -184,10 +188,10 @@ export default function Home() {
                 className="mx-auto mb-3 text-[#A89262] w-11 h-11 sm:w-12 sm:h-12 md:w-14 md:h-14"
                 strokeWidth={1.3}
               />
-              <div className="font-display text-2xl sm:text-3xl md:text-3xl px-1 text-stone-900 leading-tight">
+              <div className="font-['Garamond',_'EB_Garamond',_serif] rtl:font-['Alexandria',_sans-serif] font-display text-2xl sm:text-3xl md:text-3xl px-1 text-stone-900 leading-tight">
                 {t(`home.statsLabels.${key}`)}
               </div>
-              <div className="text-xs text-stone-500 mt-1.5 tracking-wide max-w-[140px] sm:max-w-none">
+              <div className="font-['Century_Gothic',_Futura,_sans-serif] rtl:font-['Tajawal',_sans-serif] text-xs text-stone-500 mt-1.5 tracking-wide max-w-[140px] sm:max-w-none">
                 {t(`home.stats.${key}`)}
               </div>
             </div>
@@ -199,7 +203,7 @@ export default function Home() {
       <section className="py-8 sm:py-16 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-5 sm:px-8">
           <div className="flex items-center justify-center sm:justify-between mb-1 sm:mb-12">
-            <h2 className="font-display text-xl sm:text-3xl md:text-4xl text-stone-900 tracking-widest uppercase text-center sm:text-left">
+            <h2 className="font-['Garamond',_'EB_Garamond',_serif] rtl:font-['Alexandria'] font-display text-xl sm:text-3xl md:text-4xl text-stone-900 tracking-widest uppercase text-center sm:text-left">
               {t("home.projectsTitle")}
             </h2>
             {/* Visible ONLY on desktop/tablet (md and larger) */}
@@ -238,12 +242,12 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-3 sm:px-8">
           <div className="bg-[#E5E2DC] p-3 sm:p-8 md:p-12 rounded-none shadow-sm pb-6 sm:pb-12">
             <div className="flex items-center justify-center sm:justify-between mb-4 sm:mb-12">
-              <h2 className="font-display text-lg sm:text-2xl md:text-3xl text-stone-900 tracking-widest uppercase text-center sm:text-left">
+              <h2 className="font-['Garamond',_'EB_Garamond',_serif] rtl:font-['Alexandria',_sans-serif] font-bold font-display text-lg sm:text-2xl md:text-3xl text-stone-900 tracking-widest uppercase text-center sm:text-left">
                 {t("home.collectionTitle")}
               </h2>
               <Link
                 to="/stone-types"
-                className="hidden sm:flex items-center gap-2 text-xs sm:text-sm font-medium text-stone-900 hover:opacity-75 transition-opacity"
+                className="font-['Century_Gothic',_Futura,_sans-serif] rtl:font-['Tajawal',_sans-serif] hidden sm:flex items-center gap-2 text-xs sm:text-sm font-medium text-stone-900 hover:opacity-75 transition-opacity"
               >
                 {t("home.viewAll")} <Arrow size={16} />
               </Link>
@@ -276,10 +280,10 @@ export default function Home() {
                     )}
 
                     <div className="p-4 sm:p-6 md:p-8 flex-1 flex flex-col items-center text-center">
-                      <h3 className="font-['Garamond',_'EB_Garamond',_serif] rtl:font-['Alexandria',sans-serif] font-bold text-base sm:text-xl md:text-xl text-stone-900 mb-1.5 sm:mb-3">
+                      <h3 className="font-['Century_Gothic',_Futura,_sans-serif] rtl:font-['Tajawal',_sans-serif] font-bold text-base sm:text-xl md:text-xl text-stone-900 mb-1.5 sm:mb-3">
                         {stoneName}
                       </h3>
-                      <p className="text-xs sm:text-xs md:text-sm text-stone-600 leading-relaxed max-w-[220px] sm:max-w-[260px]">
+                      <p className="font-['Century_Gothic',_Futura,_sans-serif] rtl:font-['Tajawal',_sans-serif] text-xs sm:text-xs md:text-sm text-stone-600 leading-relaxed max-w-[220px] sm:max-w-[260px]">
                         {t(`stoneTypes.stones.${key}.body`)}
                       </p>
                     </div>
@@ -303,14 +307,14 @@ export default function Home() {
       {/* Why Choose Cedar Stone */}
       <section className="bg-[#E5E2DC] py-8 sm:py-16 md:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-8">
-          <h2 className="font-display text-lg sm:text-2xl md:text-3xl text-[#333333] tracking-widest uppercase mb-6 sm:mb-12 text-center sm:text-left">
+          <h2 className="font-['Garamond',_'EB_Garamond',_serif] rtl:font-['Alexandria',_sans-serif] font-bold font-display text-lg sm:text-2xl md:text-3xl text-[#333333] tracking-widest uppercase mb-6 sm:mb-12 text-center sm:text-left">
             {t("home.whyTitle")}
             <span className="text-[#87775A] font-semibold ml-1">
               {t("home.whyTitleHighlight")}
             </span>
           </h2>
 
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6 items-stretch">
             {["quality", "service", "tailored", "delivery"].map((key) => {
               const titleText = t(`home.why.${key}.title`);
 
@@ -336,30 +340,28 @@ export default function Home() {
               return (
                 <div
                   key={key}
-                  className="bg-[#F8F7F5] px-3 py-4 sm:p-8 md:p-10 flex flex-col items-center justify-start text-center shadow-sm rounded-sm sm:rounded-none"
+                  className="bg-[#F8F7F5] p-4 sm:p-8 flex flex-col items-center justify-start text-center shadow-sm rounded-sm sm:rounded-none h-full"
                 >
-                  <div
-                    className={`mb-2 sm:mb-6 flex items-center justify-center ${
-                      key === "delivery"
-                        ? "h-24 w-24 sm:h-20 sm:w-20 md:h-24 md:w-24"
-                        : "h-20 w-20 sm:h-16 sm:w-16 md:h-20 md:w-20"
-                    }`}
-                  >
+                  {/* Icon Wrapper - Constant height maintains horizontal baseline */}
+                  <div className="h-16 w-16 sm:h-20 sm:w-20 mb-4 sm:mb-6 flex items-center justify-center shrink-0">
                     <img
                       src={whyPictures[key]}
                       alt={titleText}
-                      className="max-h-full max-w-full object-contain"
+                      className={`max-h-full max-w-full object-contain ${
+                        key === "delivery" ? "scale-125 sm:scale-130" : ""
+                      }`}
                     />
                   </div>
 
-                  <h3
-                    className="font-['Garamond',_'EB_Garamond',_serif] rtl:font-['Alexandria',sans-serif]
-                  font-bold text-sm sm:text-xl md:text-xl text-stone-900 mb-1 sm:mb-3 leading-tight"
-                  >
-                    {formattedTitle}
-                  </h3>
+                  {/* Title Wrapper - Equal Height keeps all copy aligned */}
+                  <div className="min-h-[2.5rem] sm:min-h-[3.25rem] flex items-center justify-center mb-2 sm:mb-3">
+                    <h3 className="font-['Century_Gothic',_Futura,_sans-serif] rtl:font-['Tajawal',_sans-serif] font-bold text-base sm:text-xl text-stone-900 leading-tight">
+                      {formattedTitle}
+                    </h3>
+                  </div>
 
-                  <p className="text-[11px] sm:text-xs md:text-sm text-stone-600 leading-normal sm:leading-relaxed max-w-[160px] sm:max-w-[220px]">
+                  {/* Body Copy */}
+                  <p className="font-['Century_Gothic',_Futura,_sans-serif] rtl:font-['Tajawal',_sans-serif] text-xs sm:text-sm text-stone-600 leading-relaxed max-w-[200px] sm:max-w-[240px] flex-1">
                     {t(`home.why.${key}.body`)}
                   </p>
                 </div>
@@ -377,22 +379,22 @@ export default function Home() {
           <div className="py-10 sm:py-12 md:py-16 px-6 sm:px-12 lg:px-20 flex flex-col justify-center items-start">
             <h2 className="font-['Garamond',_'EB_Garamond',_serif] rtl:font-['Alexandria',_sans-serif] text-xl sm:text-3xl lg:text-4xl text-stone-900 uppercase tracking-widest mb-4">
               {t("home.aboutTitle")}
-              <span className="text-[#87775A] ml-1">
+              <span className="font-['Garamond',_'EB_Garamond',_serif] rtl:font-['Alexandria',_sans-serif] text-[#87775A] ml-1">
                 {t("home.aboutTitleHighlight")}
               </span>
             </h2>
 
-            <h3 className="font-['Century_Gothic',_Futura,_sans-serif] text-xs sm:text-sm md:text-base text-stone-800 mb-4 sm:mb-6">
+            <h3 className="font-['Century_Gothic',_Futura,_sans-serif] rtl:font-['Tajawal',_sans-serif] text-xs sm:text-sm md:text-base text-stone-800 mb-4 sm:mb-6">
               {t("home.aboutSubtitle")}
             </h3>
 
-            <p className="font-['Century_Gothic',_Futura,_sans-serif] text-xs sm:text-sm text-stone-700 leading-relaxed whitespace-pre-line mb-6 sm:mb-8 max-w-xl">
+            <p className="font-['Century_Gothic',_Futura,_sans-serif] rtl:font-['Tajawal',_sans-serif] text-xs sm:text-sm text-stone-700 leading-relaxed whitespace-pre-line mb-6 sm:mb-8 max-w-xl">
               {t("home.aboutBody")}
             </p>
 
             <Link
               to="/about"
-              className="inline-block w-full max-w-xs sm:w-auto border border-stone-900 text-stone-900 text-xs font-semibold sm:text-sm tracking-wide px-8 sm:px-12 md:px-16 py-3.5 rounded-full hover:bg-stone-900 hover:text-white transition-all duration-300 text-center"
+              className="inline-block w-full max-w-sm md:max-w-md border border-stone-900 text-stone-900 text-xs font-semibold sm:text-sm tracking-wide px-12 sm:px-20 md:px-28 py-3.5 rounded-full hover:bg-stone-900 hover:text-white transition-all duration-300 text-center"
             >
               {t("home.readStory")}
             </Link>

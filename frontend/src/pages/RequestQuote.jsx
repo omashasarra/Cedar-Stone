@@ -20,7 +20,7 @@ export default function RequestQuote() {
     email: "",
     phone: "",
     city: "",
-    stone: [],
+    stone: "",
     quantity: "",
     details: "",
   });
@@ -29,38 +29,6 @@ export default function RequestQuote() {
     return (e) => setForm((f) => ({ ...f, [field]: e.target.value }));
   }
 
-  function handleStoneChange(e) {
-    const selectedOptions = Array.from(
-      e.target.selectedOptions,
-      (option) => option.value,
-    );
-    setForm((f) => ({ ...f, stone: selectedOptions }));
-  }
-  async function handleSubmit(e) {
-    e.preventDefault();
-    setIsSubmitting(true);
-    setErrorMsg("");
-
-    const formattedForm = {
-      ...form,
-      stone: form.stone.join(", "),
-    };
-
-    try {
-      await emailjs.send(
-        import.meta.env.VITE_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-        formattedForm,
-        import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
-      );
-      setSubmitted(true);
-    } catch (err) {
-      console.error("EmailJS Error:", err);
-      setErrorMsg("Failed to send request. Please try again later.");
-    } finally {
-      setIsSubmitting(false);
-    }
-  }
   async function handleSubmit(e) {
     e.preventDefault();
     setIsSubmitting(true);
@@ -207,30 +175,28 @@ export default function RequestQuote() {
 
                 <div>
                   <label className={labelClass}>{t("quote.stoneType")}</label>
-                  <div className="grid grid-cols-2 gap-2 mt-2">
-                    {stoneTypes.map((s) => (
-                      <label
-                        key={s.key}
-                        className="flex items-center gap-2 text-sm text-stone-700 cursor-pointer"
-                      >
-                        <input
-                          type="checkbox"
-                          value={s.key}
-                          checked={form.stone.includes(s.key)}
-                          onChange={(e) => {
-                            const value = s.key;
-                            setForm((f) => ({
-                              ...f,
-                              stone: e.target.checked
-                                ? [...f.stone, value]
-                                : f.stone.filter((item) => item !== value),
-                            }));
-                          }}
-                          className="rounded border-stone-300 text-stone-900 focus:ring-stone-500"
-                        />
-                        {t(`stoneTypes.stones.${s.key}.name`)}
-                      </label>
-                    ))}
+                  <div className="relative">
+                    <select
+                      required
+                      className={`${inputClass} appearance-none pr-10`}
+                      value={form.stone}
+                      onChange={update("stone")}
+                    >
+                      {stoneTypes.map((s) => (
+                        <option
+                          key={s.key}
+                          value={t(`stoneTypes.stones.${s.key}.name`)}
+                        >
+                          {t(`stoneTypes.stones.${s.key}.name`)}
+                        </option>
+                      ))}
+                    </select>
+                    <ChevronDown
+                      size={16}
+                      className={`absolute ${
+                        isRTL ? "left-3" : "right-3"
+                      } top-1/2 -translate-y-1/2 pointer-events-none text-stone-400`}
+                    />
                   </div>
                 </div>
 
