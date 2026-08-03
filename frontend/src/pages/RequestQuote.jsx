@@ -20,7 +20,7 @@ export default function RequestQuote() {
     email: "",
     phone: "",
     city: "",
-    stone: "",
+    stone: "", // Default empty string so placeholder is selected
     quantity: "",
     details: "",
   });
@@ -178,18 +178,32 @@ export default function RequestQuote() {
                   <div className="relative">
                     <select
                       required
-                      className={`${inputClass} appearance-none pr-10`}
+                      className={`${inputClass} appearance-none pr-10 ${
+                        !form.stone ? "text-stone-400" : "text-stone-900"
+                      }`}
                       value={form.stone}
                       onChange={update("stone")}
                     >
+                      {/* Placeholder front label */}
+                      <option value="" disabled hidden>
+                        {t("quote.selectStone", "Stone Types")}
+                      </option>
+
+                      {/* Stone list from data */}
                       {stoneTypes.map((s) => (
                         <option
                           key={s.key}
                           value={t(`stoneTypes.stones.${s.key}.name`)}
+                          className="text-stone-900"
                         >
                           {t(`stoneTypes.stones.${s.key}.name`)}
                         </option>
                       ))}
+
+                      {/* Other option */}
+                      <option value="Other" className="text-stone-900">
+                        {t("quote.other", "Other")}
+                      </option>
                     </select>
                     <ChevronDown
                       size={16}
