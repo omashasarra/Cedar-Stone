@@ -239,7 +239,7 @@ function IndustryCard({ item, index, t }) {
             </div>
 
             <div className="w-full flex-1 flex items-start justify-center pt-1 overflow-hidden">
-              <div className="font-['Century_Gothic',sans-serif] text-[9px] sm:text-[11px] text-stone-700 leading-relaxed font-normal text-center max-w-[95%] whitespace-pre-wrap">
+              <div className="font-['Century_Gothic',sans-serif] text-[9px] sm:text-[11px] text-stone-700 leading-relaxed font-normal text-justify [text-justify:inter-word] [hyphens:none] [word-break:normal] max-w-[95%] whitespace-pre-wrap">
                 {typedText}
                 {isRevealed && typedText.length < descriptionText.length && (
                   <span className="inline-block ml-[1px] animate-pulse text-[#8c7a6b]">
@@ -271,7 +271,7 @@ function IndustryCard({ item, index, t }) {
             <span className="font-['Garamond'] text-[20px] sm:text-xs text-[#8c7a6b] mb-1 sm:mb-2 translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 delay-100">
               0{index + 1} — {t(`about.industries.${index}`)}
             </span>
-            <p className="font-['Century_Gothic',sans-serif] text-[10px] sm:text-[13px] text-stone-700 leading-relaxed font-normal max-w-[90%] translate-y-3 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 delay-150">
+            <p className="font-['Century_Gothic',sans-serif] text-justify [text-justify:inter-word] [hyphens:none] [word-break:normal] text-[10px] sm:text-[13px] text-stone-700 leading-relaxed font-normal max-w-[90%] translate-y-3 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 delay-150">
               {t(`about.industryDescriptions.${item.key}`)}
             </p>
           </div>
@@ -312,7 +312,7 @@ export default function About() {
             <h1 className="font-['Garamond',_'EB_Garamond',_serif] rtl:font-['Alexandria',_sans-serif] text-3xl sm:text-5xl md:text-6xl text-white leading-[1.1] md:leading-[1.05]">
               {t("about.heroTitle")}
             </h1>
-            <p className="font-['Century_Gothic',_Futura,_sans-serif] text-stone-100/90 mt-4 sm:mt-5 text-xs sm:text-sm md:text-base leading-relaxed">
+            <p className="font-['Century_Gothic',_Futura,_sans-serif] text-justify [text-justify:inter-word] [hyphens:none] [word-break:normal] text-stone-100/90 mt-4 sm:mt-5 text-xs sm:text-sm md:text-base leading-relaxed">
               {t("about.heroSubtitle")}
             </p>
           </div>
@@ -334,7 +334,7 @@ export default function About() {
               <h3 className="font-['Garamond',serif] rtl:font-['Alexandria',sans-serif] text-2xl text-white mb-2 leading-tight">
                 {t("about.impactTitle")}
               </h3>
-              <p className="text-white/90 text-[11px] sm:text-xs leading-relaxed font-['Century_Gothic',sans-serif] font-light">
+              <p className="text-white/90 text-[11px] sm:text-xs leading-relaxed font-['Century_Gothic',sans-serif] font-light text-justify [text-justify:inter-word] [hyphens:none] [word-break:normal]">
                 {t("about.impactBody")}
               </p>
             </div>
@@ -347,7 +347,7 @@ export default function About() {
               <h3 className="font-['Garamond',serif] rtl:font-['Alexandria',sans-serif] text-lg sm:text-2xl text-stone-900 mb-2 leading-tight">
                 {t("about.legacyTitle")}
               </h3>
-              <p className="text-[11px] sm:text-xs text-stone-700 leading-normal sm:leading-relaxed font-['Century_Gothic',sans-serif] font-light">
+              <p className="text-[11px] sm:text-xs text-stone-700 leading-normal sm:leading-relaxed font-['Century_Gothic',sans-serif] font-light text-justify [text-justify:inter-word] [hyphens:none] [word-break:normal]">
                 {t("about.legacyBody")}
               </p>
             </div>
@@ -387,7 +387,7 @@ export default function About() {
               <h3 className="font-['Century_Gothic',sans-serif] font-bold text-lg sm:text-xl text-stone-900 mb-3">
                 {t("about.missionTitle")}
               </h3>
-              <p className="font-['Century_Gothic',sans-serif] text-xs sm:text-[14px] text-stone-800 leading-relaxed font-normal">
+              <p className="font-['Century_Gothic',sans-serif] text-justify [text-justify:inter-word] [hyphens:none] [word-break:normal] text-xs sm:text-[14px] text-stone-800 leading-relaxed font-normal">
                 {t("about.missionBody")}
               </p>
             </div>
@@ -398,7 +398,7 @@ export default function About() {
               <h3 className="font-['Century_Gothic',sans-serif] font-bold text-lg sm:text-xl text-stone-900 mb-3">
                 {t("about.visionTitle")}
               </h3>
-              <p className="font-['Century_Gothic',sans-serif] text-xs sm:text-[14px] text-stone-800 leading-relaxed font-normal">
+              <p className="font-['Century_Gothic',sans-serif] text-justify [text-justify:inter-word] [hyphens:none] [word-break:normal] text-xs sm:text-[14px] text-stone-800 leading-relaxed font-normal">
                 {t("about.visionBody")}
               </p>
             </div>
@@ -446,7 +446,7 @@ export default function About() {
                   </h3>
                 </div>
 
-                <p className="font-['Century_Gothic',sans-serif] text-[10px] sm:text-[13px] text-stone-600 leading-relaxed font-normal">
+                <p className="font-['Century_Gothic',sans-serif] text-justify [text-justify:inter-word] [hyphens:none] [word-break:normal] text-[10px] sm:text-[13px] text-stone-600 leading-relaxed font-normal">
                   {t(`about.values.${key}.body`)}
                 </p>
               </div>
@@ -525,7 +525,7 @@ export default function About() {
                     )}
                   </h3>
 
-                  <p className="font-['Century_Gothic',sans-serif] text-xs sm:text-sm text-stone-500 leading-relaxed max-w-md mb-4 lg:mb-0">
+                  <p className="font-['Century_Gothic',sans-serif] text-justify [text-justify:inter-word] [hyphens:none] [word-break:normal] text-xs sm:text-sm text-stone-500 leading-relaxed max-w-md mb-4 lg:mb-0">
                     {step.body}
                   </p>
                 </div>
@@ -554,7 +554,7 @@ export default function About() {
           </h2>
 
           <p
-            className={`text-xs sm:text-sm text-stone-700 max-w-3xl mb-8 sm:mb-12 font-['Century_Gothic',sans-serif] text-center md:text-left rtl:md:text-right ${
+            className={`text-xs sm:text-sm text-stone-700 max-w-3xl mb-8 sm:mb-12 font-['Century_Gothic',sans-serif] text-justify [text-justify:inter-word] [hyphens:none] [word-break:normal] text-center md:text-left rtl:md:text-right ${
               isRTL ? "md:ml-auto" : ""
             }`}
           >

@@ -87,7 +87,7 @@ export default function StoneTypes() {
             <h1 className="font-['Garamond',_'EB_Garamond',_serif] rtl:font-['Alexandria',_sans-serif] text-3xl sm:text-5xl md:text-6xl text-white leading-[1.1] md:leading-[1.05]">
               {t("stoneTypes.heroTitle")}
             </h1>
-            <p className="font-['Century_Gothic',_Futura,_sans-serif] rtl:font-['Tajawal',_sans-serif] text-stone-100/90 mt-4 sm:mt-5 text-xs sm:text-sm md:text-base leading-relaxed">
+            <p className="font-['Century_Gothic',_Futura,_sans-serif] rtl:font-['Tajawal',_sans-serif] text-stone-100/90 mt-4 sm:mt-5 text-xs sm:text-sm md:text-base leading-relaxed text-justify">
               {t("stoneTypes.heroSubtitle")}
             </p>
           </div>
@@ -119,7 +119,7 @@ export default function StoneTypes() {
                   <h3 className="font-['Century_Gothic',_'EB_Garamond',_serif] rtl:font-['Tajawal'] font-bold text-lg sm:text-xl text-stone-900 mb-2">
                     {t(`stoneTypes.stones.${stone.key}.name`)}
                   </h3>
-                  <p className="font-['Century_Gothic'] rtl:font-['Tajawal',_sans-serif] text-xs sm:text-sm text-stone-600 leading-relaxed max-w-[280px]">
+                  <p className="font-['Century_Gothic'] rtl:font-['Tajawal',_sans-serif] text-xs sm:text-sm text-stone-600 leading-relaxed max-w-[280px] text-justify">
                     {t(`stoneTypes.stones.${stone.key}.body`)}
                   </p>
                 </div>
@@ -137,7 +137,7 @@ export default function StoneTypes() {
               {t("stoneTypes.finishesTitle")}
             </h2>
 
-            <p className="font-['Century_Gothic',_sans-serif] rtl:font-['Tajawal',_sans-serif] text-stone-600 text-xs sm:text-sm md:text-base leading-relaxed max-w-3xl mb-8 sm:mb-14 text-center sm:text-start mx-auto sm:ms-0">
+            <p className="font-['Century_Gothic',_sans-serif] rtl:font-['Tajawal',_sans-serif] text-stone-600 text-xs sm:text-sm md:text-base leading-relaxed max-w-3xl mb-8 sm:mb-14 text-justify mx-auto sm:ms-0">
               {t("stoneTypes.finishesSubtitle")}
             </p>
 

@@ -283,7 +283,7 @@ export default function Home() {
                       <h3 className="font-['Century_Gothic',_Futura,_sans-serif] rtl:font-['Tajawal',_sans-serif] font-bold text-base sm:text-xl md:text-xl text-stone-900 mb-1.5 sm:mb-3">
                         {stoneName}
                       </h3>
-                      <p className="font-['Century_Gothic',_Futura,_sans-serif] rtl:font-['Tajawal',_sans-serif] text-xs sm:text-xs md:text-sm text-stone-600 leading-relaxed max-w-[220px] sm:max-w-[260px]">
+                      <p className="font-['Century_Gothic',_Futura,_sans-serif] rtl:font-['Tajawal',_sans-serif] text-xs text-justify [text-justify:inter-word] sm:text-xs md:text-sm text-stone-600 leading-relaxed max-w-[220px] sm:max-w-[260px]">
                         {t(`stoneTypes.stones.${key}.body`)}
                       </p>
                     </div>
@@ -361,7 +361,7 @@ export default function Home() {
                   </div>
 
                   {/* Body Copy */}
-                  <p className="font-['Century_Gothic',_Futura,_sans-serif] rtl:font-['Tajawal',_sans-serif] text-xs sm:text-sm text-stone-600 leading-relaxed max-w-[200px] sm:max-w-[240px] flex-1">
+                  <p className="font-['Century_Gothic',_Futura,_sans-serif] rtl:font-['Tajawal',_sans-serif] text-justify text-xs sm:text-sm text-stone-600 leading-relaxed max-w-[200px] sm:max-w-[240px] flex-1">
                     {t(`home.why.${key}.body`)}
                   </p>
                 </div>
@@ -388,7 +388,7 @@ export default function Home() {
               {t("home.aboutSubtitle")}
             </h3>
 
-            <p className="font-['Century_Gothic',_Futura,_sans-serif] rtl:font-['Tajawal',_sans-serif] text-xs sm:text-sm text-stone-700 leading-relaxed whitespace-pre-line mb-6 sm:mb-8 max-w-xl">
+            <p className="font-['Century_Gothic',_Futura,_sans-serif] rtl:font-['Tajawal',_sans-serif] text-xs text-justify sm:text-sm text-stone-700 leading-relaxed whitespace-pre-line mb-6 sm:mb-8 max-w-xl">
               {t("home.aboutBody")}
             </p>
 
@@ -430,7 +430,7 @@ export default function Home() {
           } items-center justify-between gap-6 sm:gap-8 my-auto ${isRTL ? "order-1" : "order-2"}`}
         >
           <p
-            className={`text-[#F8F7F5] italic text-xl sm:text-2xl lg:text-3xl max-w-3xl leading-snug text-center lg:text-left ${
+            className={`text-[#F8F7F5] italic text-xl sm:text-2xl text-justify lg:text-3xl max-w-3xl leading-snug text-center lg:text-left ${
               isRTL
                 ? "font-['Tajawal',_sans-serif] not-italic leading-normal text-right lg:text-right"
                 : "font-['Garamond',_'EB_Garamond',_serif]"

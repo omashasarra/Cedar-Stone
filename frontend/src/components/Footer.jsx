@@ -177,15 +177,22 @@ export default function Footer() {
               </a>
             </div>
 
-            <h3 className="font-['Century_Gothic',_Futura,_sans-serif] rtl:font-['Tajawal',_sans-serif] text-base text-[#2A2A2A] font-semibold">
-              {t("footer.location")}
-            </h3>
-            <div className="flex items-start gap-2 text-xs text-[#666666]">
-              <MapPin className="w-4 h-4 text-[#5A5A5A] shrink-0 mt-0.5" />
-              <div>
-                <p>{locationLine1}</p>
-                <p>{locationLine2}</p>
-              </div>
+            <div className="flex flex-col space-y-3">
+              <h3 className="font-['Century_Gothic',_Futura,_sans-serif] rtl:font-['Tajawal',_sans-serif] text-base text-[#2A2A2A] font-semibold mb-1">
+                {t("footer.location")}
+              </h3>
+              <a
+                href="https://maps.google.com?q=Cedar%20Stone%20LB%20%D9%85%D9%86%D8%B4%D8%A7%D8%B1%20%D8%B5%D8%AE%D8%B1,%20Bathaniyeh,%20Lebanon"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-start gap-2 text-xs text-[#666666] hover:text-black transition-colors group"
+              >
+                <MapPin className="w-4 h-4 text-[#5A5A5A] group-hover:text-black shrink-0 mt-0.5 transition-colors" />
+                <div>
+                  <p>{locationLine1}</p>
+                  <p>{locationLine2}</p>
+                </div>
+              </a>
             </div>
           </div>
         </div>
@@ -271,7 +278,7 @@ export default function Footer() {
                 <span>cedar_stone_lb</span>
               </a>
               <a
-                href="https://www.linkedin.com/company/cedar-stone-lb"
+                href="https://www.linkedin.com/in/cedar-stone-82a909423?utm_source=share_via&utm_content=profile&utm_medium=member_ios"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2.5 hover:text-black transition-colors"

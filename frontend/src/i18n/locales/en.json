@@ -10,7 +10,7 @@
     "heroTitle": "Natural Stone Solutions",
     "heroSubtitle": "Over 35 years of experience manufacturing premium natural stone for façades, flooring, wall cladding, and custom architectural projects across Lebanon.",
     "stats": {
-      "experience": "Experience",
+      "experience": "Years of Experience",
       "natural": "Natural Stone",
       "projects": "Completed Projects",
       "custom": "Precision Crafted"
@@ -225,7 +225,7 @@
     "quantityPlaceholder": "e.g. 50 sqm",
     "details": "Project Details",
     "detailsPlaceholder": "Tell us about your project\u2026",
-    "send": "Request Quote",
+    "send": "Request a Qoute",
     "successTitle": "Thank you!",
     "successBody": "Your quote request has been received. Our team will review your details and contact you shortly.",
     "sendAnother": "Send another request"
