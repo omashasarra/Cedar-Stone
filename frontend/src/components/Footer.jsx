@@ -158,7 +158,8 @@ export default function Footer() {
                 <span>cedar_stone_lb</span>
               </a>
               <a
-                href="https://www.linkedin.com/in/cedar-stone-82a909423?utm_source=share_via&utm_content=profile&utm_medium=member_ios
+                href="https://www.linkedin.com/in/cedar-stone-82a909423"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2.5 hover:text-black transition-colors"
               >
@@ -277,7 +278,7 @@ export default function Footer() {
                 <span>cedar_stone_lb</span>
               </a>
               <a
-                href="https://www.linkedin.com/in/cedar-stone-82a909423?utm_source=share_via&utm_content=profile&utm_medium=member_ios"
+                href="https://www.linkedin.com/in/cedar-stone-82a909423"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2.5 hover:text-black transition-colors"
