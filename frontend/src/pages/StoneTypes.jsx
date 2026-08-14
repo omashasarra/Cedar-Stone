@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import StoneImageCycler from "../components/StoneImageCycler";
 
-import heroImage from "../assets/Stone&Projects/herostones.svg";
+import heroImage from "../assets/StoneTypes-Hero.svg";
 
 // ---- Stone Collection images ----
 import kfairImg1 from "../assets/Stone&Projects/stone_kfairstone-35.jpg";

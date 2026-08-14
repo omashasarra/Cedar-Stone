@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { User, Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X, Globe } from "lucide-react";
 import { FaLinkedin, FaInstagram } from "react-icons/fa6";
 import { setLanguage } from "../i18n/index.js";
 import logo from "../assets/Logo.svg";
@@ -25,36 +25,23 @@ function TikTokIcon({ className }) {
 export default function CedarStoneNavbar() {
   const { t, i18n } = useTranslation();
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
 
   const lang = i18n.language?.startsWith("ar") ? "ar" : "en";
   const dir = lang === "ar" ? "rtl" : "ltr";
   const toggleLang = () => setLanguage(lang === "en" ? "ar" : "en");
 
-  // Track scroll position
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 80) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
   return (
-    <div dir={dir} className="font-sans relative">
-      {/* Top Header - Transparent Background */}
-      <header className="bg-transparent">
+    <div dir={dir} className="font-sans relative pt-44 sm:pt-48">
+      {/* ===== 1. Sticky Top Header (Forced to LTR regardless of active language) ===== */}
+      <header
+        dir="ltr"
+        className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md shadow-sm border-b border-neutral-100"
+      >
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-12">
           <div className="relative flex h-24 items-center justify-between">
-            {/* --- Left Side (LTR) / Right Side (RTL) --- */}
-            <div className="flex items-center gap-3">
-              {/* Mobile Hamburger Toggle */}
+            {/* Left Side: Mobile Hamburger & Desktop Socials */}
+            <div className="flex items-center gap-3 z-10">
               <button
                 onClick={() => setMobileOpen(true)}
                 className="md:hidden p-2 text-neutral-800 focus:outline-none"
@@ -63,7 +50,6 @@ export default function CedarStoneNavbar() {
                 <Menu className="h-6 w-6" />
               </button>
 
-              {/* Social Icons (Desktop) */}
               <div className="hidden md:flex items-center gap-2.5">
                 <a
                   href="#"
@@ -89,45 +75,34 @@ export default function CedarStoneNavbar() {
               </div>
             </div>
 
-            {/* --- Center: Logo --- */}
-            <div className="absolute left-1/2 -translate-x-1/2 top-2">
+            {/* Center: Scaled Up Logo */}
+            <div className="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2">
               <Link to="/">
                 <img
                   src={logo}
                   alt="Cedar Stone - Hasbaya Lebanon"
-                  className="h-20 sm:h-22 w-auto object-contain"
+                  className="h-24 sm:h-32 w-auto object-contain transition-all duration-300"
                 />
               </Link>
             </div>
 
-            {/* --- Right Side (LTR) / Left Side (RTL): Language Switcher --- */}
-            <div className="flex items-center gap-3">
-              <button className="flex items-center gap-2 text-neutral-800 hover:text-neutral-600 transition-colors">
-                <button
-                  onClick={toggleLang}
-                  className="flex items-center gap-1 px-2 text-base font-medium"
-                >
-                  <span>{lang === "en" ? "EN" : "ع"}</span>
-                </button>
+            {/* Right Side: Swapped Language Switcher */}
+            <div className="flex items-center gap-3 z-10">
+              <button
+                onClick={toggleLang}
+                className="flex items-center justify-center gap-1.5 px-3.5 py-1.5 rounded-full text-neutral-700 font-medium transition-all duration-300 hover:bg-neutral-900 hover:text-white hover:scale-105 active:scale-95 cursor-pointer"
+              >
+                <Globe className="h-4 w-4" />
+                <span>{lang === "en" ? "ع" : "EN"}</span>
               </button>
             </div>
           </div>
         </div>
       </header>
 
-      {/* Spacer for natural layout spacing */}
-      <div className="hidden md:block h-16" />
-
-      {/* ===== Floating Desktop Navigation Bar Pill ===== */}
-      <div
-        className={`hidden md:flex justify-center transition-all duration-300 z-50 ${
-          isScrolled
-            ? "fixed top-4 left-1/2 -translate-x-1/2"
-            : "absolute top-20 left-1/2 -translate-x-1/2"
-        }`}
-      >
-        {/* Main Navigation Container with embedded Quote Link (Same for EN and AR) */}
-        <div className="flex items-center gap-6 rounded-full bg-white/40 backdrop-blur-md px-8 py-3 shadow-lg border border-white/50">
+      {/* ===== 2. Standalone Sticky Floating Pill Navigation Bar ===== */}
+      <div className="hidden md:flex fixed top-28 left-1/2 -translate-x-1/2 z-40">
+        <div className="flex items-center gap-6 rounded-full bg-white/70 backdrop-blur-md px-8 py-3 shadow-lg border border-white/80">
           {NAV_ITEMS.map((item) => {
             const isActive = location.pathname === item.path;
             const title = t(`nav.${item.key}`);
@@ -146,7 +121,7 @@ export default function CedarStoneNavbar() {
             );
           })}
 
-          {/* Request Quote Link embedded inline for both English and Arabic */}
+          {/* Request Quote Link */}
           {(() => {
             const isQuoteActive = location.pathname === "/request-quote";
             const quoteTitle = t("nav.quote");
@@ -166,7 +141,7 @@ export default function CedarStoneNavbar() {
         </div>
       </div>
 
-      {/* ===== Mobile Side-Drawer Menu ===== */}
+      {/* ===== 3. Mobile Side-Drawer Menu ===== */}
       {mobileOpen && (
         <div className="fixed inset-0 z-50 flex">
           {/* Backdrop Overlay */}
