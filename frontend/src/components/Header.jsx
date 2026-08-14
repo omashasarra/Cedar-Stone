@@ -32,7 +32,8 @@ export default function CedarStoneNavbar() {
   const toggleLang = () => setLanguage(lang === "en" ? "ar" : "en");
 
   return (
-    <div dir={dir} className="font-sans relative pt-44 sm:pt-48">
+    /* Changed pt-44 to pt-24 for mobile so content sits directly under the 24-unit (96px) header */
+    <div dir={dir} className="font-sans relative pt-24 sm:pt-48">
       {/* ===== 1. Sticky Top Header (Forced to LTR regardless of active language) ===== */}
       <header
         dir="ltr"
