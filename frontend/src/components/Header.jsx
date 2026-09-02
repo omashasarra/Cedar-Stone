@@ -53,21 +53,18 @@ export default function CedarStoneNavbar() {
 
               <div className="hidden md:flex items-center gap-2.5">
                 <a
-                  href="#"
                   aria-label="TikTok"
                   className="flex h-9 w-9 items-center justify-center rounded-full bg-[#4A4A4A] text-white hover:bg-black transition-colors"
                 >
                   <TikTokIcon className="h-4 w-4" />
                 </a>
                 <a
-                  href="#"
                   aria-label="LinkedIn"
                   className="flex h-9 w-9 items-center justify-center rounded-full bg-[#4A4A4A] text-white hover:bg-black transition-colors"
                 >
                   <FaLinkedin className="h-4 w-4" />
                 </a>
                 <a
-                  href="#"
                   aria-label="Instagram"
                   className="flex h-9 w-9 items-center justify-center rounded-full bg-[#4A4A4A] text-white hover:bg-black transition-colors"
                 >
@@ -201,21 +198,18 @@ export default function CedarStoneNavbar() {
             {/* Social Icons at bottom of mobile menu */}
             <div className="p-6 flex items-center gap-4">
               <a
-                href="#"
                 aria-label="TikTok"
                 className="flex h-11 w-11 items-center justify-center rounded-full bg-[#4A4A4A] text-white"
               >
                 <TikTokIcon className="h-5 w-5" />
               </a>
               <a
-                href="#"
                 aria-label="LinkedIn"
                 className="flex h-11 w-11 items-center justify-center rounded-full bg-[#4A4A4A] text-white"
               >
                 <FaLinkedin className="h-5 w-5" />
               </a>
               <a
-                href="#"
                 aria-label="Instagram"
                 className="flex h-11 w-11 items-center justify-center rounded-full bg-[#4A4A4A] text-white"
               >

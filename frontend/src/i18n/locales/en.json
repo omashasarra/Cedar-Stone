@@ -2,7 +2,7 @@
   "nav": {
     "home": "Home",
     "about": "About Us",
-    "stoneTypes": "Stone Types",
+    "stoneTypes": "Stone Colors",
     "projects": "Projects",
     "quote": "Request Quote"
   },
@@ -123,7 +123,7 @@
         "titlePart1": "Surface",
         "titlePart2": "Finishing & Treatments",
         "highlightFirst": false,
-        "body": "Every project has its own character. We offer a variety of surface finishes\u2014including polished, smooth, antique, bush-hammered, rough, and hand-carved\u2014to complement different architectural styles and design requirements."
+        "body": "Every project has its own character. We offer a variety of surface finishes—including polished, smooth, antique, bush-hammered, rough, and hand-carved—to complement different architectural styles and design requirements."
       },
       {
         "step": "04",
@@ -137,7 +137,7 @@
         "titlePart1": "Custom",
         "titlePart2": "Stone Products & Carved Elements",
         "highlightFirst": true,
-        "body": "Beyond standard products, we create bespoke architectural elements\u2014including columns, balustrades, fireplace surrounds, thresholds, sills, and decorative stone features\u2014crafted to meet the unique vision of every project."
+        "body": "Beyond standard products, we create bespoke architectural elements—including columns, balustrades, fireplace surrounds, thresholds, sills, and decorative stone features—crafted to meet the unique vision of every project."
       }
     ],
     "applicationsTitle": "Project Gallery",
@@ -153,47 +153,36 @@
     }
   },
   "stoneTypes": {
-    "heroTitle": "Our Natural Stone Collection",
-    "heroSubtitle": "Explore our selection of premium Lebanese natural stones, crafted for residential, commercial, and hospitality projects.",
-    "collectionTitle": "Stone Collection",
+    "heroTitle": "National Stone Colors",
+    "heroSubtitle": "Our collection features some of the finest natural stone colors in Lebanon, carefully selected to meet the requirements of all types of projects.",
+    "collectionTitle": "National Stone Colors",
     "finishesTitle": "Surface Finishes",
     "finishesSubtitle": "Every stone has its own character. Our range of finishes enhances its natural beauty while meeting aesthetic and functional requirements.",
     "stones": {
-      "kfair": {
-        "name": "Kfair Stone",
-        "body": "Strong and durable natural stone with warm yellow and brown tones, ideal for exterior facades and heritage-inspired architecture."
+      "white": {
+        "name": "White Stone",
+        "tagline": "TIMELESS. REFINED. NATURAL",
+        "body": "A symbol of purity and sophistication. Perfect for modern and classic architectural designs."
       },
-      "taria": {
-        "name": "Taria Stone \u2013 Baalbek",
-        "body": "A durable stone known for its beautiful antique finish, making it a popular choice for exterior cladding and staircases."
+      "black": {
+        "name": "Black Stone",
+        "tagline": "BOLD. DISTINCTIVE. POWERFUL.",
+        "body": "Sticking and elegant. Black Stone adds depth and a strong character to any space."
       },
-      "arsal": {
-        "name": "Arsal Stone",
-        "body": "One of Lebanon's most renowned stones, valued for its strength, durability, and versatility in both indoor and outdoor applications."
+      "brown": {
+        "name": "Brown Stone",
+        "tagline": "WARM. NATURAL. SOPHISTICATED.",
+        "body": "Warm earthy tones that bring natural comfort and timeless beauty to your surroundings."
       },
-      "shira": {
-        "name": "Shira Stone",
-        "body": "Available in light and dark tones, Shira Stone is perfect for flooring, staircases, and heritage-style architectural designs."
+      "ivory": {
+        "name": "Ivory Stone",
+        "tagline": "SOFT. ELEGANT. VERSATILE.",
+        "body": "Soft and elegant tones that adapt to any style, creating bright and welcoming spaces."
       },
-      "testa": {
-        "name": "Testa Stone (Byblos Stone)",
-        "body": "A bright white natural stone that brings elegance and sophistication to both interior and exterior spaces."
-      },
-      "rous": {
-        "name": "Rous Stone",
-        "body": "Featuring rich, darker tones, Rous Stone is ideal for antique and heritage-inspired architectural projects."
-      },
-      "labbaya": {
-        "name": "Labbaya Stone",
-        "body": "Recognized for its warm beige and pink shades, Labbaya Stone is suitable for a wide range of indoor and outdoor applications."
-      },
-      "saghbine": {
-        "name": "Saghbine Stone",
-        "body": "A versatile natural stone available in light and dark yellow tones, suitable for a variety of architectural projects."
-      },
-      "basalt": {
-        "name": "Basalt Stone",
-        "body": "Highly durable and weather-resistant. Basalt Stone is an excellent choice for flooring, landscaping, and outdoor spaces."
+      "yellowishBrown": {
+        "name": "Yellowish-Brown Stone",
+        "tagline": "SOFT. ELEGANT. VERSATILE.",
+        "body": "Soft and elegant tones that adapt to any style, creating bright and welcoming spaces."
       }
     },
     "finishes": [
@@ -220,15 +209,17 @@
     "contact": "Contact No.",
     "city": "City",
     "cityPlaceholder": "Town / City",
-    "stoneType": "Required Stone Type",
+    "stoneColor": "Required Stone Color",
+    "selectColor": "Select Stone Color",
     "quantity": "Estimated Quantity",
     "quantityPlaceholder": "e.g. 50 sqm",
     "details": "Project Details",
-    "detailsPlaceholder": "Tell us about your project\u2026",
+    "detailsPlaceholder": "Tell us about your project…",
     "send": "Request a Quote",
     "successTitle": "Thank you!",
     "successBody": "Your quote request has been received. Our team will review your details and contact you shortly.",
-    "sendAnother": "Send another request"
+    "sendAnother": "Send another request",
+    "other": "Other"
   },
   "footer": {
     "tagline": "Precision Crafted Natural Stone Solutions.",
@@ -238,7 +229,7 @@
     "socialMedia": "Social Media",
     "location": "Our Location",
     "locationValue": "Zoummaraiya, Hasbaya, South Lebanon",
-    "rights": "\u00a9 2026 Cedar Stone. All Rights Reserved.",
+    "rights": "© 2026 Cedar Stone. All Rights Reserved.",
     "privacy": "Privacy Policy",
     "terms": "Terms & Conditions"
   },

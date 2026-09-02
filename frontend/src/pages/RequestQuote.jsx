@@ -3,7 +3,6 @@ import { useTranslation } from "react-i18next";
 import { ChevronDown } from "lucide-react";
 import emailjs from "@emailjs/browser";
 import villaImage from "../assets/Stone&Projects/villa4.jpg";
-import { stoneTypes } from "../data/stoneTypes";
 
 export default function RequestQuote() {
   const { t, i18n } = useTranslation();
@@ -15,12 +14,14 @@ export default function RequestQuote() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [errorMsg, setErrorMsg] = useState("");
 
+  const stoneColorKeys = ["white", "black", "brown", "ivory", "yellowishBrown"];
+
   const [form, setForm] = useState({
     name: "",
     email: "",
     phone: "",
     city: "",
-    stone: "", // Default empty string so placeholder is selected
+    stone: "", // Holds selected stone color
     quantity: "",
     details: "",
   });
@@ -174,7 +175,7 @@ export default function RequestQuote() {
                 </div>
 
                 <div>
-                  <label className={labelClass}>{t("quote.stoneType")}</label>
+                  <label className={labelClass}>{t("quote.stoneColor")}</label>
                   <div className="relative">
                     <select
                       required
@@ -186,17 +187,17 @@ export default function RequestQuote() {
                     >
                       {/* Placeholder front label */}
                       <option value="" disabled hidden>
-                        {t("quote.selectStone", "Stone Types")}
+                        {t("quote.selectColor", "Select Stone Color")}
                       </option>
 
-                      {/* Stone list from data */}
-                      {stoneTypes.map((s) => (
+                      {/* Stone colors list */}
+                      {stoneColorKeys.map((key) => (
                         <option
-                          key={s.key}
-                          value={t(`stoneTypes.stones.${s.key}.name`)}
+                          key={key}
+                          value={t(`stoneTypes.stones.${key}.name`)}
                           className="text-stone-900"
                         >
-                          {t(`stoneTypes.stones.${s.key}.name`)}
+                          {t(`stoneTypes.stones.${key}.name`)}
                         </option>
                       ))}
 

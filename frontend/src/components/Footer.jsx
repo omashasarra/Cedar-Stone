@@ -66,7 +66,7 @@ export default function Footer() {
 
   const WhatsAppButton = (
     <a
-      href="https://wa.me/96170703900"
+      href="https://wa.me/96103069958"
       target="_blank"
       rel="noreferrer"
       className="mt-1 inline-flex w-12 h-12 bg-[#D4E8DF] hover:bg-[#c2e0d3] rounded-full items-center justify-center transition-all shadow-sm"
@@ -134,12 +134,12 @@ export default function Footer() {
                 <span>info@cedarstonelb.com</span>
               </a>
               <a
-                href="tel:+96170703900"
+                href="tel:+96103069958"
                 dir="ltr"
                 className="flex items-center gap-2.5 hover:text-black transition-colors"
               >
                 <Phone className="w-4 h-4 text-[#5A5A5A]" />
-                <span>+961 70 703 900</span>
+                <span>+961 03 069 958</span>
               </a>
               {WhatsAppButton}
             </div>
@@ -149,7 +149,6 @@ export default function Footer() {
             </h3>
             <div className="space-y-2.5 text-xs text-[#666666]">
               <a
-                href="https://www.tiktok.com/@cedar_stone_lb?_r=1&_t=ZS-98UxFxzszCv"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2.5 hover:text-black transition-colors"
@@ -158,7 +157,6 @@ export default function Footer() {
                 <span>cedar_stone_lb</span>
               </a>
               <a
-                href="https://www.linkedin.com/in/cedar-stone-82a909423"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2.5 hover:text-black transition-colors"
@@ -167,7 +165,7 @@ export default function Footer() {
                 <span>Cedar Stone</span>
               </a>
               <a
-                href="https://www.instagram.com/cedar_stone_lb/"
+                href="#"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2.5 hover:text-black transition-colors"
@@ -251,11 +249,11 @@ export default function Footer() {
               </a>
 
               <a
-                href="tel:+96170703900"
+                href="tel:+96103069958"
                 className="flex items-center gap-2.5 hover:text-black transition-colors"
               >
                 <Phone className="w-4 h-4 text-[#5A5A5A] shrink-0" />
-                <span dir="ltr">+961 70 703 900</span>
+                <span dir="ltr">+961 03 069 958</span>
               </a>
             </div>
 
@@ -269,7 +267,6 @@ export default function Footer() {
             </h3>
             <div className="space-y-2.5 text-xs text-[#666666]">
               <a
-                href="https://www.tiktok.com/@cedar_stone_lb?_r=1&_t=ZS-98UxFxzszCv"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2.5 hover:text-black transition-colors"
@@ -278,7 +275,6 @@ export default function Footer() {
                 <span>cedar_stone_lb</span>
               </a>
               <a
-                href="https://www.linkedin.com/in/cedar-stone-82a909423"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2.5 hover:text-black transition-colors"
@@ -287,7 +283,6 @@ export default function Footer() {
                 <span>Cedar Stone</span>
               </a>
               <a
-                href="https://www.instagram.com/cedar_stone_lb/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2.5 hover:text-black transition-colors"

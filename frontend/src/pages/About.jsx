@@ -21,7 +21,7 @@ const valueIcons = {
 };
 
 import Hero from "../assets/AboutUs-Hero&Legacy/hero.png";
-import DesktopHero from "../assets/AboutUs-Hero&Legacy/AboutUsHero.jpg";
+import DesktopHero from "../assets/AboutUs-Hero&Legacy/AboutUsHero.svg";
 
 import LegacyStoneImg from "../assets/AboutUs-Hero&Legacy/AboutUsStone.jpg";
 import MissionImg from "../assets/Mission&Vission/aboutus_mission.jpg";
