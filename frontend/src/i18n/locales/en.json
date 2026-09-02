@@ -183,6 +183,42 @@
         "name": "Yellowish-Brown Stone",
         "tagline": "SOFT. ELEGANT. VERSATILE.",
         "body": "Soft and elegant tones that adapt to any style, creating bright and welcoming spaces."
+      },
+      "kfair": {
+        "name": "Kfair Stone",
+        "body": "Strong and durable natural stone with warm yellow and brown tones, ideal for exterior facades and heritage-inspired architecture."
+      },
+      "taria": {
+        "name": "Taria Stone \u2013 Baalbek",
+        "body": "A durable stone known for its beautiful antique finish, making it a popular choice for exterior cladding and staircases."
+      },
+      "arsal": {
+        "name": "Arsal Stone",
+        "body": "One of Lebanon's most renowned stones, valued for its strength, durability, and versatility in both indoor and outdoor applications."
+      },
+      "shira": {
+        "name": "Shira Stone",
+        "body": "Available in light and dark tones, Shira Stone is perfect for flooring, staircases, and heritage-style architectural designs."
+      },
+      "testa": {
+        "name": "Testa Stone (Byblos Stone)",
+        "body": "A bright white natural stone that brings elegance and sophistication to both interior and exterior spaces."
+      },
+      "rous": {
+        "name": "Rous Stone",
+        "body": "Featuring rich, darker tones, Rous Stone is ideal for antique and heritage-inspired architectural projects."
+      },
+      "labbaya": {
+        "name": "Labbaya Stone",
+        "body": "Recognized for its warm beige and pink shades, Labbaya Stone is suitable for a wide range of indoor and outdoor applications."
+      },
+      "saghbine": {
+        "name": "Saghbine Stone",
+        "body": "A versatile natural stone available in light and dark yellow tones, suitable for a variety of architectural projects."
+      },
+      "basalt": {
+        "name": "Basalt Stone",
+        "body": "Highly durable and weather-resistant. Basalt Stone is an excellent choice for flooring, landscaping, and outdoor spaces."
       }
     },
     "finishes": [
