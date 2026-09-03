@@ -12,7 +12,7 @@ import {
 import { TbUserStar } from "react-icons/tb";
 import Swatch from "../components/Swatch";
 import StoneImageCycler from "../components/StoneImageCycler";
-import { stoneTypes, featuredStones } from "../data/stoneTypes";
+import { stoneTypes } from "../data/stoneTypes";
 import { projects } from "../data/projects";
 import heroImage from "../assets/Landing-Hero.jpg";
 
@@ -23,6 +23,19 @@ import project1Img from "../assets/villas/villa2.png";
 import project2Img from "../assets/villas/Villa2.jpg";
 import project3Img from "../assets/villas/Villa3.jpg";
 
+// Stone Collection Images
+import whiteImg1 from "../assets/Stone&Projects/white_stone_1.jpg";
+import whiteImg2 from "../assets/Stone&Projects/white_stone_2.jpg";
+import whiteImg3 from "../assets/Stone&Projects/white_stone_3.jpg";
+
+import blackImg1 from "../assets/Stone&Projects/black_stone_1.jpg";
+import blackImg2 from "../assets/Stone&Projects/black_stone_2.jpg";
+import blackImg3 from "../assets/Stone&Projects/black_stone_3.jpg";
+
+import brownImg1 from "../assets/Stone&Projects/brown_stone_1.jpg";
+import brownImg2 from "../assets/Stone&Projects/brown_stone_2.jpg";
+import brownImg3 from "../assets/Stone&Projects/brown_stone_3.jpg";
+
 // Why Choose Cedar Stone images
 import qualityPic from "../assets/Landing-Icons/quality.svg";
 import servicePic from "../assets/Landing-Icons/service.svg";
@@ -31,6 +44,28 @@ import deliveryPic from "../assets/Landing-Icons/delivery.svg";
 
 import LandingAbout from "../assets/CedarStoneLanding.jpg";
 import Stone from "../assets/UnderCedarLanding.jpg";
+
+// Collection mappings for cycling images & image overlay styles
+const collectionStonesConfig = [
+  {
+    key: "white",
+    images: [whiteImg1, whiteImg2, whiteImg3],
+    gradientOverlay: "from-white/95 via-white/70 to-transparent",
+    textColor: "text-stone-900",
+  },
+  {
+    key: "black",
+    images: [blackImg1, blackImg2, blackImg3],
+    gradientOverlay: "from-black/90 via-black/60 to-transparent",
+    textColor: "text-white",
+  },
+  {
+    key: "brown",
+    images: [brownImg1, brownImg2, brownImg3],
+    gradientOverlay: "from-[#4A3B2C]/90 via-[#4A3B2C]/60 to-transparent",
+    textColor: "text-white",
+  },
+];
 
 // Why Choose Cedar Stone images mapping
 const whyPictures = {
@@ -136,16 +171,13 @@ export default function Home() {
     });
   };
 
+  // Sequentially cycle through white (idx 0), black (idx 1), and brown (idx 2)
+  const [activeStoneIndex, setActiveStoneIndex] = useState(0);
+
   useEffect(() => {
     const interval = setInterval(() => {
-      setSlots((prev) => {
-        return {
-          0: prev[2],
-          1: prev[0],
-          2: prev[1],
-        };
-      });
-    }, 3500);
+      setActiveStoneIndex((prev) => (prev + 1) % collectionStonesConfig.length);
+    }, 3000);
 
     return () => clearInterval(interval);
   }, []);
@@ -240,59 +272,67 @@ export default function Home() {
       {/* Stone Collection */}
       <section className="bg-white py-6 sm:py-16 md:py-20 pb-12 sm:pb-24">
         <div className="max-w-7xl mx-auto px-3 sm:px-8">
-          <div className="bg-[#E5E2DC] p-3 sm:p-8 md:p-12 rounded-none shadow-sm pb-6 sm:pb-12">
-            <div className="flex items-center justify-center sm:justify-between mb-4 sm:mb-12">
-              <h2 className="font-['Garamond',_'EB_Garamond',_serif] rtl:font-['Alexandria',_sans-serif] font-bold font-display text-lg sm:text-2xl md:text-3xl text-stone-900 tracking-widest uppercase text-center sm:text-left">
+          <div className="bg-[#E5E2DC] p-4 sm:p-8 md:p-12 rounded-none shadow-sm pb-8 sm:pb-16">
+            <div className="flex items-center justify-between mb-6 sm:mb-12">
+              <h2 className="font-['Garamond',_'EB_Garamond',_serif] rtl:font-['Alexandria',_sans-serif] font-normal font-display text-lg sm:text-2xl md:text-3xl text-stone-900 tracking-widest uppercase text-left">
                 {t("home.collectionTitle")}
               </h2>
               <Link
                 to="/stone-types"
-                className="font-['Century_Gothic',_Futura,_sans-serif] rtl:font-['Tajawal',_sans-serif] hidden sm:flex items-center gap-2 text-xs sm:text-sm font-medium text-stone-900 hover:opacity-75 transition-opacity"
+                className="font-['Century_Gothic',_Futura,_sans-serif] rtl:font-['Tajawal',_sans-serif] flex items-center gap-2 text-xs sm:text-sm font-medium text-stone-900 hover:opacity-75 transition-opacity"
               >
                 {t("home.viewAll")} <Arrow size={16} />
               </Link>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8 justify-items-center">
-              {featuredStones.map((key, idx) => {
-                const stone = stoneTypes.find((s) => s.key === key);
-                const stoneName = t(`stoneTypes.stones.${key}.name`);
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 justify-items-center">
+              {collectionStonesConfig.map((item, idx) => {
+                const stone = stoneTypes.find((s) => s.key === item.key);
+                const stoneName = t(`stoneTypes.stones.${item.key}.name`);
+                const cyclerImages =
+                  item.images ||
+                  (stone?.images && stone.images.length > 0
+                    ? stone.images
+                    : null);
 
                 return (
                   <div
-                    key={key}
-                    className="bg-white rounded-xl shadow-md sm:shadow-lg shadow-stone-900/20 overflow-hidden flex flex-col justify-between w-full max-w-[260px] sm:max-w-none mx-auto"
+                    key={item.key}
+                    className="relative group overflow-hidden w-full max-w-[340px] sm:max-w-none aspect-square shadow-sm"
                   >
-                    {stone?.images && stone.images.length > 0 ? (
+                    {cyclerImages && cyclerImages.length > 0 ? (
                       <StoneImageCycler
-                        images={stone.images}
+                        images={cyclerImages}
                         alt={stoneName}
                         intervalMs={3000}
-                        delayMs={idx * 1000}
-                        className="h-44 sm:h-56 md:h-64 w-full"
+                        delayMs={0}
+                        isManualActive={activeStoneIndex === idx}
+                        className="h-full w-full object-cover"
                       />
                     ) : (
                       <Swatch
                         gradient={stone?.swatch}
-                        className="h-44 sm:h-56 md:h-64 rounded-none"
+                        className="h-full w-full rounded-none"
                         label={stoneName}
                       />
                     )}
 
-                    <div className="p-4 sm:p-6 md:p-8 flex-1 flex flex-col items-center text-center">
-                      <h3 className="font-['Century_Gothic',_Futura,_sans-serif] rtl:font-['Tajawal',_sans-serif] font-bold text-base sm:text-xl md:text-xl text-stone-900 mb-1.5 sm:mb-3">
+                    {/* Gradient Overlay & Integrated Title Shadow */}
+                    <div
+                      className={`absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t ${item.gradientOverlay} flex items-end justify-center pb-4 sm:pb-6 px-4 z-10 pointer-events-none`}
+                    >
+                      <h3
+                        className={`font-['Garamond',_'EB_Garamond',_serif] rtl:font-['Tajawal',_sans-serif] font-normal text-lg sm:text-xl md:text-2xl tracking-widest uppercase text-center ${item.textColor}`}
+                      >
                         {stoneName}
                       </h3>
-                      <p className="font-['Century_Gothic',_Futura,_sans-serif] rtl:font-['Tajawal',_sans-serif] text-xs text-justify [text-justify:inter-word] sm:text-xs md:text-sm text-stone-600 leading-relaxed max-w-[220px] sm:max-w-[260px]">
-                        {t(`stoneTypes.stones.${key}.body`)}
-                      </p>
                     </div>
                   </div>
                 );
               })}
             </div>
 
-            <div className="mt-6 flex sm:hidden justify-center">
+            <div className="mt-8 flex sm:hidden justify-center">
               <Link
                 to="/stone-types"
                 className="flex items-center gap-2 text-xs font-semibold text-stone-900 hover:opacity-75 px-4 py-2"

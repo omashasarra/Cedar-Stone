@@ -39,7 +39,7 @@ import InteriorDesignersIcon from "../assets/AboutUs-Industries/interior-designe
 import HospitalityIcon from "../assets/AboutUs-Industries/hospitality-projects.svg";
 import CommercialIcon from "../assets/AboutUs-Industries/commercial.svg";
 
-import ProcessStep1 from "../assets/steps/step1.png";
+import ProcessStep1 from "../assets/StoneTypes-Hero.svg";
 import ProcessStep2 from "../assets/steps/step2.png";
 import ProcessStep3 from "../assets/steps/step3.png";
 import ProcessStep4 from "../assets/steps/step4.png";
