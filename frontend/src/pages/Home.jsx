@@ -171,6 +171,23 @@ export default function Home() {
     });
   };
 
+  // Auto-rotate project cards through center every few seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setSlots((prev) => {
+        const next = {};
+        Object.entries(prev).forEach(([idx, slot]) => {
+          if (slot === "left") next[idx] = "center";
+          else if (slot === "center") next[idx] = "right";
+          else next[idx] = "left";
+        });
+        return next;
+      });
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   // Sequentially cycle through white (idx 0), black (idx 1), and brown (idx 2)
   const [activeStoneIndex, setActiveStoneIndex] = useState(0);
 
@@ -401,7 +418,7 @@ export default function Home() {
                   </div>
 
                   {/* Body Copy */}
-                  <p className="font-['Century_Gothic',_Futura,_sans-serif] rtl:font-['Tajawal',_sans-serif] text-justify text-xs sm:text-sm text-stone-600 leading-relaxed max-w-[200px] sm:max-w-[240px] flex-1">
+                  <p className="font-['Century_Gothic',_Futura,_sans-serif] rtl:font-['Tajawal',_sans-serif] text-justify hyphens-auto [text-justify:inter-character] text-xs sm:text-sm text-stone-600 leading-relaxed max-w-[200px] sm:max-w-[240px] flex-1">
                     {t(`home.why.${key}.body`)}
                   </p>
                 </div>
@@ -428,7 +445,7 @@ export default function Home() {
               {t("home.aboutSubtitle")}
             </h3>
 
-            <p className="font-['Century_Gothic',_Futura,_sans-serif] rtl:font-['Tajawal',_sans-serif] text-xs text-justify sm:text-sm text-stone-700 leading-relaxed whitespace-pre-line mb-6 sm:mb-8 max-w-xl">
+            <p className="font-['Century_Gothic',_Futura,_sans-serif] rtl:font-['Tajawal',_sans-serif] text-xs text-justify hyphens-auto [text-justify:inter-character] sm:text-sm text-stone-700 leading-relaxed whitespace-pre-line mb-6 sm:mb-8 max-w-xl">
               {t("home.aboutBody")}
             </p>
 
@@ -470,7 +487,7 @@ export default function Home() {
           } items-center justify-between gap-6 sm:gap-8 my-auto ${isRTL ? "order-1" : "order-2"}`}
         >
           <p
-            className={`text-[#F8F7F5] italic text-xl sm:text-2xl text-justify lg:text-3xl max-w-3xl leading-snug text-center lg:text-left ${
+            className={`text-[#F8F7F5] italic text-xl sm:text-2xl text-justify hyphens-auto [text-justify:inter-character] lg:text-3xl max-w-3xl leading-snug text-center lg:text-left ${
               isRTL
                 ? "font-['Tajawal',_sans-serif] not-italic leading-normal text-right lg:text-right"
                 : "font-['Garamond',_'EB_Garamond',_serif]"
