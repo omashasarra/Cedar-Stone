@@ -42,7 +42,7 @@ export default function CedarStoneNavbar() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-12">
           <div className="relative flex h-24 items-center justify-between">
             {/* Left Side: Mobile Hamburger & Desktop Socials */}
-            <div className="flex items-center gap-3 z-10">
+            {/* <div className="flex items-center gap-3 z-10">
               <button
                 onClick={() => setMobileOpen(true)}
                 className="md:hidden p-2 text-neutral-800 focus:outline-none"
@@ -71,7 +71,7 @@ export default function CedarStoneNavbar() {
                   <FaInstagram className="h-4 w-4" />
                 </a>
               </div>
-            </div>
+            </div> */}
 
             {/* Center: Scaled Up Logo */}
             <div className="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2">
@@ -196,7 +196,7 @@ export default function CedarStoneNavbar() {
             </div>
 
             {/* Social Icons at bottom of mobile menu */}
-            <div className="p-6 flex items-center gap-4">
+            {/* <div className="p-6 flex items-center gap-4">
               <a
                 aria-label="TikTok"
                 className="flex h-11 w-11 items-center justify-center rounded-full bg-[#4A4A4A] text-white"
@@ -215,7 +215,7 @@ export default function CedarStoneNavbar() {
               >
                 <FaInstagram className="h-5 w-5" />
               </a>
-            </div>
+            </div> */}
           </div>
         </div>
       )}

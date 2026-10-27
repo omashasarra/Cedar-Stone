@@ -144,7 +144,7 @@ export default function Footer() {
               {WhatsAppButton}
             </div>
 
-            <h3 className="font-['Century_Gothic',_Futura,_sans-serif] rtl:font-['Tajawal',_sans-serif] text-base text-[#2A2A2A] font-semibold">
+            {/* <h3 className="font-['Century_Gothic',_Futura,_sans-serif] rtl:font-['Tajawal',_sans-serif] text-base text-[#2A2A2A] font-semibold">
               {t("footer.socialMedia")}
             </h3>
             <div className="space-y-2.5 text-xs text-[#666666]">
@@ -173,17 +173,17 @@ export default function Footer() {
                 <InstagramIcon className="w-4 h-4 text-[#333333]" />
                 <span>cedar_stone_lb</span>
               </a>
-            </div>
+            </div> */}
 
-            <div className="flex flex-col space-y-3">
-              <h3 className="font-['Century_Gothic',_Futura,_sans-serif] rtl:font-['Tajawal',_sans-serif] text-base text-[#2A2A2A] font-semibold mb-1">
+            <div className="flex items-start gap-3">
+              <h3 className="font-['Century_Gothic',_Futura,_sans-serif] rtl:font-['Tajawal',_sans-serif] text-base text-[#2A2A2A] font-semibold shrink-0">
                 {t("footer.location")}
               </h3>
               <a
                 href="https://maps.google.com?q=Cedar%20Stone%20LB%20%D9%85%D9%86%D8%B4%D8%A7%D8%B1%20%D8%B5%D8%AE%D8%B1,%20Bathaniyeh,%20Lebanon"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-start gap-2 text-xs text-[#666666] hover:text-black transition-colors group"
+                className="flex items-start gap-2.5 text-xs text-[#666666] hover:text-black transition-colors group"
               >
                 <MapPin className="w-4 h-4 text-[#5A5A5A] group-hover:text-black shrink-0 mt-0.5 transition-colors" />
                 <div>
@@ -196,7 +196,7 @@ export default function Footer() {
         </div>
 
         {/* Desktop View */}
-        <div className="hidden md:grid max-w-12xl mx-auto grid-cols-2 lg:grid-cols-5 gap-8 items-start">
+        <div className="hidden md:grid max-w-12xl mx-auto grid-cols-2 lg:grid-cols-4 gap-8 items-start">
           {/* Column 1: Logo & Brand Info */}
           <div className="flex flex-col items-center text-center">
             <div className="relative flex flex-col items-center">
@@ -260,7 +260,7 @@ export default function Footer() {
             <div className="pt-2 flex justify-start">{WhatsAppButton}</div>
           </div>
 
-          {/* Column 4: Social Media */}
+          {/* Column 4: Social Media
           <div className="flex flex-col space-y-3">
             <h3 className="font-['Century_Gothic',_Futura,_sans-serif] rtl:font-['Tajawal',_sans-serif] text-base text-[#2A2A2A] font-semibold mb-1">
               {t("footer.socialMedia")}
@@ -291,7 +291,7 @@ export default function Footer() {
                 <span>cedar_stone_lb</span>
               </a>
             </div>
-          </div>
+          </div> */}
 
           {/* Column 5: Our Location */}
           <div className="flex flex-col space-y-3">
