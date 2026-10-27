@@ -175,15 +175,15 @@ export default function Footer() {
               </a>
             </div> */}
 
-            <div className="flex items-start gap-3">
-              <h3 className="font-['Century_Gothic',_Futura,_sans-serif] rtl:font-['Tajawal',_sans-serif] text-base text-[#2A2A2A] font-semibold shrink-0">
-                {t("footer.location")}
-              </h3>
+            <h3 className="font-['Century_Gothic',_Futura,_sans-serif] rtl:font-['Tajawal',_sans-serif] text-base text-[#2A2A2A] font-semibold">
+              {t("footer.location")}
+            </h3>
+            <div className="space-y-2.5 text-xs text-[#666666]">
               <a
                 href="https://maps.google.com?q=Cedar%20Stone%20LB%20%D9%85%D9%86%D8%B4%D8%A7%D8%B1%20%D8%B5%D8%AE%D8%B1,%20Bathaniyeh,%20Lebanon"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-start gap-2.5 text-xs text-[#666666] hover:text-black transition-colors group"
+                className="flex items-start gap-2.5 hover:text-black transition-colors group"
               >
                 <MapPin className="w-4 h-4 text-[#5A5A5A] group-hover:text-black shrink-0 mt-0.5 transition-colors" />
                 <div>
